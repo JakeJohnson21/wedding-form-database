@@ -22,7 +22,7 @@ function App() {
       if (checkIfContains) {
         const removePost = await deletePost(postId);
         await setRestaurantList((currentList) => {
-          return currentList.filter(removePost3);
+          return currentList.filter(removePost);
         });
       }
     } catch (e) {
