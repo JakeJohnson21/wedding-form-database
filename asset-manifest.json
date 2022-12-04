@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/wedding-form-database/static/css/main.4e22b41a.css",
+    "main.js": "/wedding-form-database/static/js/main.78176329.js",
+    "static/js/787.e09bca64.chunk.js": "/wedding-form-database/static/js/787.e09bca64.chunk.js",
+    "index.html": "/wedding-form-database/index.html",
+    "main.4e22b41a.css.map": "/wedding-form-database/static/css/main.4e22b41a.css.map",
+    "main.78176329.js.map": "/wedding-form-database/static/js/main.78176329.js.map",
+    "787.e09bca64.chunk.js.map": "/wedding-form-database/static/js/787.e09bca64.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4e22b41a.css",
+    "static/js/main.78176329.js"
+  ]
+}
