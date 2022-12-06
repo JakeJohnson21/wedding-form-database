@@ -1,12 +1,13 @@
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const { MongoClient } = require("mongodb");
+
 const restaurantRouter = require("./routes/restaurants");
 
 const { mongoServerAddress } = require("./utils/utils");
-const cors = require("cors");
 const app = express();
 
 async function listDatabases(client) {
