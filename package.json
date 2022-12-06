@@ -1,6 +1,10 @@
 {
   "dependencies": {
-    "node": "^19.2.0"
+    "cors": "^2.8.5",
+    "mongod": "^2.0.0",
+    "mongoose": "^6.8.0",
+    "node": "^19.2.0",
+    "nodemon": "^2.0.20"
   },
   "scripts": {
     "start": "nodemon app.js"
