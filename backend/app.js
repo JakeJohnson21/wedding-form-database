@@ -31,7 +31,7 @@ async function main() {
 }
 main().catch(console.error);
 
-const { PORT = 3080 } = process.env;
+const { PORT = 3000 } = process.env;
 
 mongoose.connect(mongoServerAddress);
 app.use(cors());
