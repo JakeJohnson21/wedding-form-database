@@ -25,7 +25,7 @@ function FoodForm() {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "restaurants", ...values }),
+          body: encode({ values }),
         })
           .then(() => {
             alert("success");
