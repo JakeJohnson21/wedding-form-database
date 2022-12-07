@@ -30,15 +30,21 @@ function App() {
           </Link>
         </nav>
         <Routes>
-          <Route path="/food" name="food" component={<FoodForm />}>
-            <FoodForm encode={encode} />
-          </Route>
-          <Route path="/stay" name="stay" component={<StayForm />}>
-            <StayForm encode={encode} />
-          </Route>
-          <Route path="/play" component={<PlayForm />}>
-            <PlayForm encode={encode} />
-          </Route>
+          <Route
+            path="/food"
+            name="food"
+            component={<FoodForm encode={encode} />}
+          />
+          <Route
+            path="/stay"
+            name="stay"
+            component={<StayForm encode={encode} />}
+          />
+          <Route
+            path="/play"
+            name="play"
+            component={<PlayForm encode={encode} />}
+          />
         </Routes>
         <div className="post__content">
           {/* {restaurantList.map((item) => (
