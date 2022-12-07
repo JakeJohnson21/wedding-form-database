@@ -1,51 +1,14 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import FoodForm from "../FoodForm/FoodForm";
 import "./App.css";
-import { addRestaurant, getRestaurant, deletePost } from "../../utils/api";
-// import StayForm from "../StayForm";
 
 function App() {
-  const [restaurantList, setRestaurantList] = useState([]);
-
-  const handleAddNewRestaurant = async (data) => {
-    try {
-      const newRestaurant = await addRestaurant(data);
-      return newRestaurant;
-    } catch (err) {
-      console.log(`ERROR: ${err}`);
-    }
-  };
-
-  const handleDeleteEntry = async (postId) => {
-    try {
-      const checkIfContains = await restaurantList.includes(postId);
-      if (checkIfContains) {
-        const removePost = await deletePost(postId);
-        await setRestaurantList((currentList) => {
-          return currentList.filter(removePost);
-        });
-      }
-    } catch (e) {
-      return console.error("error: ", e);
-    }
-  };
-
-  const getRestaurantList = async () => {
-    const restaurantData = await getRestaurant();
-    await console.log("restaurantData", restaurantData);
-    await setRestaurantList(restaurantData);
-  };
-
-  useEffect(() => {
-    getRestaurantList();
-  }, []);
-
   return (
     <div className="App">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
-      <FoodForm onAddSubmit={handleAddNewRestaurant} />
+      <FoodForm />
       <div className="post__content">
-        {restaurantList.map((item) => (
+        {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>
             <button
               onClick={() => {
@@ -83,10 +46,47 @@ function App() {
               <p>{item.attire}</p>
             </label>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
 }
 
 export default App;
+
+// API functions for backend
+
+//  const [restaurantList, setRestaurantList] = useState([]);
+
+// const handleAddNewRestaurant = async (data) => {
+//   try {
+//     const newRestaurant = await addRestaurant(data);
+//     return newRestaurant;
+//   } catch (err) {
+//     console.log(`ERROR: ${err}`);
+//   }
+// };
+
+// const handleDeleteEntry = async (postId) => {
+//   try {
+//     const checkIfContains = await restaurantList.includes(postId);
+//     if (checkIfContains) {
+//       const removePost = await deletePost(postId);
+//       await setRestaurantList((currentList) => {
+//         return currentList.filter(removePost);
+//       });
+//     }
+//   } catch (e) {
+//     return console.error("error: ", e);
+//   }
+// };
+
+// const getRestaurantList = async () => {
+//   const restaurantData = await getRestaurant();
+//   await console.log("restaurantData", restaurantData);
+//   await setRestaurantList(restaurantData);
+// };
+
+// useEffect(() => {
+//   getRestaurantList();
+// }, []);

@@ -2,6 +2,14 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { restaurantSchema } from "../../utils/food";
 
 function FoodForm({ onAddSubmit }) {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   return (
     <Formik
       initialValues={{
@@ -13,11 +21,23 @@ function FoodForm({ onAddSubmit }) {
         attire: "",
       }}
       validationSchema={restaurantSchema}
-      onSubmit={(values) => {
-        onAddSubmit(values);
+      onSubmit={(values, actions) => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "restaurants", ...values }),
+        })
+          .then(() => {
+            alert("success");
+            actions.resetForm();
+          })
+          .catch(() => {
+            alert("Error");
+          })
+          .finally(() => actions.setSubmitting(false));
       }}
     >
-      <Form className="form">
+      <Form className="form" name="restaurants" data-netlify={true}>
         <label className="form__label">
           Restaurant Name:
           <Field name="name" className="form__input" type="text" />
