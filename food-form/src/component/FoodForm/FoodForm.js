@@ -46,7 +46,7 @@ function FoodForm({ encode }) {
             component="span"
           />
         </label>
-        ~
+
         <label className="form__label">
           Restaurant website:
           <Field

@@ -13,7 +13,7 @@ function PlayForm({ encode }) {
       }}
       validationSchema={funSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/adventures~~~", {
+        fetch("/adventures", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "adventures", ...values }),
