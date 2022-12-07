@@ -1,6 +1,9 @@
 // import { useEffect, useState } from "react";
 import FoodForm from "../FoodForm/FoodForm";
+import PlayForm from "../PlayForm";
+import StayForm from "../StayForm";
 import "./App.css";
+import { Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const encode = (data) => {
@@ -12,11 +15,33 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="page">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
-      <FoodForm encode={encode} />
-      <div className="post__content">
-        {/* {restaurantList.map((item) => (
+      <div className="app">
+        <nav className="nav">
+          <Link to="/food" className="nav__link">
+            <button className="nav__button">Restaurant</button>
+          </Link>
+          <Link to="/stay" className="nav__link">
+            <button className="nav__button">Hotel</button>
+          </Link>
+          <Link to="/play" className="nav__link">
+            <button className="nav__button">Explore</button>
+          </Link>
+        </nav>
+        <Switch>
+          <Route path="/food" name="food" component={FoodForm}>
+            <FoodForm encode={encode} />
+          </Route>
+          <Route path="/stay" name="stay" component={StayForm}>
+            <StayForm encode={encode} />
+          </Route>
+          <Route path="/play" component={PlayForm}>
+            <PlayForm encode={encode} />
+          </Route>
+        </Switch>
+        <div className="post__content">
+          {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>
             <button
               onClick={() => {
@@ -55,6 +80,7 @@ function App() {
             </label>
           </div>
         ))} */}
+        </div>
       </div>
     </div>
   );

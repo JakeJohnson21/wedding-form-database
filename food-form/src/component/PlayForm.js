@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { funSchema } from "../utils/adventure";
 
-function PlayForm({ onAddSubmit }) {
+function PlayForm({ encode }) {
   return (
     <Formik
       initialValues={{
@@ -9,22 +9,35 @@ function PlayForm({ onAddSubmit }) {
         address: "",
         url: "",
         description: "",
-        price: "",
-        attire: "",
+        cost: "",
       }}
       validationSchema={funSchema}
-      onSubmit={(values) => {
-        onAddSubmit(values);
+      onSubmit={(values, { resetForm, setSubmitting }) => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "adventures", ...values }),
+        })
+          .then(() => {
+            alert("success");
+            setSubmitting(false);
+            resetForm();
+          })
+          .catch(() => {
+            alert("Error");
+            setSubmitting(false);
+          });
       }}
     >
-      <Form className="form">
+      <Form className="form" name="adventures" data-netlify="true">
+        <input type="hidden" name="adventures" value="adventure" />
         <label className="form__label">
-          Hotel Name:
+          Explore Name:
           <Field name="name" className="form__input" type="text" />
           <ErrorMessage name="name" className="form__error" component="span" />
         </label>
         <label className="form__label">
-          Hotel address
+          Explore Address:
           <Field name="address" className="form__input" type="text" />
           <ErrorMessage
             name="address"
@@ -33,12 +46,12 @@ function PlayForm({ onAddSubmit }) {
           />
         </label>
         <label className="form__label">
-          Hotel website: starting with http://
+          Website: (starting with http://)
           <Field name="url" className="form__input" type="text" />
           <ErrorMessage name="url" className="form__error" component="span" />
         </label>
         <label className="form__label">
-          Hotel description:
+          Description:
           <Field
             id="textarea"
             name="description"
@@ -53,18 +66,9 @@ function PlayForm({ onAddSubmit }) {
           />
         </label>
         <label className="form__label">
-          Price range
-          <Field name="price" className="form__input" type="text" />
-          <ErrorMessage name="price" className="form__error" component="span" />
-        </label>
-        <label className="form__label">
-          Distance to the venue:
-          <Field name="distance" className="form__input" type="text" />
-          <ErrorMessage
-            name="distance"
-            className="form__error"
-            component="span"
-          />
+          Cost:
+          <Field name="cost" className="form__input" type="text" />
+          <ErrorMessage name="cost" className="form__error" component="span" />
         </label>
         <button type="submit" className="submit__button">
           Submit

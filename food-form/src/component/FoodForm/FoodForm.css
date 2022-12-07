@@ -12,11 +12,22 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  color: white;
+  position: relative;
+  box-shadow: none;
+  font-weight: 600;
 }
 .form__input {
+  border-radius: 10px;
+  border: none;
   width: 90%;
+  margin-top: 8px;
   font-size: 22px;
   padding: 10px;
+}
+.form__input:focus {
+  background-color: rgb(61, 61, 61);
+  color: white;
 }
 #textarea {
   height: 200px;
@@ -24,9 +35,20 @@
 .submit__button {
   margin: 0 auto;
   width: 300px;
+  margin-top: 50px;
   height: 60px;
+  font-size: 25px;
+  border-radius: 20px;
+  border: none;
+}
+.submit__button:active {
+  transform: scale(-50px);
 }
 
 .form__error {
-  color: red;
+  color: #fffa73;
+  position: absolute;
+  bottom: -24px;
+  right: 30px;
+  font-weight: bold;
 }

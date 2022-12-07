@@ -5,6 +5,6 @@ export const hotelSchema = yup.object().shape({
   address: yup.string().required(),
   url: yup.string().url().required(),
   description: yup.string(),
-  distance: yup.string().required(),
   price: yup.string(),
+  distance: yup.string().required(),
 });

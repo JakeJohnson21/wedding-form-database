@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { hotelSchema } from "../utils/stay";
 
-function StayForm({ onaddSubmit }) {
+function StayForm({ encode }) {
   return (
     <Formik
       initialValues={{
@@ -10,21 +10,35 @@ function StayForm({ onaddSubmit }) {
         url: "",
         description: "",
         price: "",
-        attire: "",
+        distance: "",
       }}
       validationSchema={hotelSchema}
-      onSubmit={(values) => {
-        onaddSubmit(values);
+      onSubmit={(values, { resetForm, setSubmitting }) => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "hotels", ...values }),
+        })
+          .then(() => {
+            alert("success");
+            setSubmitting(false);
+            resetForm();
+          })
+          .catch(() => {
+            alert("Error");
+            setSubmitting(false);
+          });
       }}
     >
-      <Form className="form">
+      <Form className="form" name="hotels" data-netlify="true">
+        <input type="hidden" name="hotels" value="hotel" />
         <label className="form__label">
-          Restaurant Name:
+          Hotel Name:
           <Field name="name" className="form__input" type="text" />
           <ErrorMessage name="name" className="form__error" component="span" />
         </label>
         <label className="form__label">
-          Restaurant address
+          Hotel address
           <Field name="address" className="form__input" type="text" />
           <ErrorMessage
             name="address"
@@ -33,12 +47,12 @@ function StayForm({ onaddSubmit }) {
           />
         </label>
         <label className="form__label">
-          Restaurant website:
+          Website:
           <Field name="url" className="form__input" type="text" />
           <ErrorMessage name="url" className="form__error" component="span" />
         </label>
         <label className="form__label">
-          Restaurant description:
+          Description:
           <Field
             id="textarea"
             name="description"
@@ -58,10 +72,10 @@ function StayForm({ onaddSubmit }) {
           <ErrorMessage name="price" className="form__error" component="span" />
         </label>
         <label className="form__label">
-          Attire:
-          <Field name="attire" className="form__input" type="text" />
+          Distance from venue:
+          <Field name="distance" className="form__input" type="text" />
           <ErrorMessage
-            name="attire"
+            name="distance"
             className="form__error"
             component="span"
           />
