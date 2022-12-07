@@ -52,7 +52,7 @@ function FoodForm({ encode }) {
           <Field
             name="url"
             className="form__input"
-            placeholder="http://..."
+            placeholder="http://"
             type="text"
           />
           <ErrorMessage name="url" className="form__error" component="span" />

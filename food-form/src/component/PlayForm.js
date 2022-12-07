@@ -49,7 +49,7 @@ function PlayForm({ encode }) {
           Website:
           <Field
             name="url"
-            placeholder="http://..."
+            placeholder="http://"
             className="form__input"
             type="text"
           />
