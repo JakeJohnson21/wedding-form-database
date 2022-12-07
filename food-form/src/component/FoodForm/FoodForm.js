@@ -31,6 +31,7 @@ function FoodForm({ encode }) {
       }}
     >
       <Form className="form" name="restaurants" data-netlify="true">
+        <input type="hidden" name="restaurants" value="restaurant" />
         <label className="form__label">
           Restaurant Name:
           <Field name="name" className="form__input" type="text" />
