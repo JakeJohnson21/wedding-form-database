@@ -48,7 +48,12 @@ function FoodForm({ encode }) {
         </label>
         <label className="form__label">
           Restaurant website:
-          <Field name="url" className="form__input" type="text" />
+          <Field
+            name="url"
+            className="form__input"
+            placeholder="http://..."
+            type="text"
+          />
           <ErrorMessage name="url" className="form__error" component="span" />
         </label>
         <label className="form__label">

@@ -46,8 +46,13 @@ function PlayForm({ encode }) {
           />
         </label>
         <label className="form__label">
-          Website: (starting with http://)
-          <Field name="url" className="form__input" type="text" />
+          Website:
+          <Field
+            name="url"
+            placeholder="http://..."
+            className="form__input"
+            type="text"
+          />
           <ErrorMessage name="url" className="form__error" component="span" />
         </label>
         <label className="form__label">

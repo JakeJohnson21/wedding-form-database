@@ -48,7 +48,12 @@ function StayForm({ encode }) {
         </label>
         <label className="form__label">
           Website:
-          <Field name="url" className="form__input" type="text" />
+          <Field
+            name="url"
+            placeholder="http://..."
+            className="form__input"
+            type="text"
+          />
           <ErrorMessage name="url" className="form__error" component="span" />
         </label>
         <label className="form__label">
