@@ -33,17 +33,17 @@ function App() {
           <Route
             path="/food"
             name="food"
-            component={<FoodForm encode={encode} />}
+            element={<FoodForm encode={encode} />}
           />
           <Route
             path="/stay"
             name="stay"
-            component={<StayForm encode={encode} />}
+            element={<StayForm encode={encode} />}
           />
           <Route
             path="/play"
             name="play"
-            component={<PlayForm encode={encode} />}
+            element={<PlayForm encode={encode} />}
           />
         </Routes>
         <div className="post__content">
