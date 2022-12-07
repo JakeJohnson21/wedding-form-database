@@ -22,7 +22,7 @@ function FoodForm() {
       }}
       validationSchema={restaurantSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/?no-cache=1", {
+        fetch("/restaurants", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "restaurants", ...values }),
@@ -38,7 +38,12 @@ function FoodForm() {
           });
       }}
     >
-      <Form className="form" name="restaurants" data-netlify={true}>
+      <Form
+        className="form"
+        name="restaurants"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
         <label className="form__label">
           Restaurant Name:
           <Field name="name" className="form__input" type="text" />
