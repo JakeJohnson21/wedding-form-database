@@ -3,7 +3,7 @@ import FoodForm from "../FoodForm/FoodForm";
 import PlayForm from "../PlayForm";
 import StayForm from "../StayForm";
 import "./App.css";
-import { Switch, Route, Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const encode = (data) => {
@@ -29,17 +29,17 @@ function App() {
             <button className="nav__button">Explore</button>
           </Link>
         </nav>
-        <Switch>
-          <Route path="/food" name="food" component={FoodForm}>
+        <Routes>
+          <Route path="/food" name="food" component={<FoodForm />}>
             <FoodForm encode={encode} />
           </Route>
-          <Route path="/stay" name="stay" component={StayForm}>
+          <Route path="/stay" name="stay" component={<StayForm />}>
             <StayForm encode={encode} />
           </Route>
-          <Route path="/play" component={PlayForm}>
+          <Route path="/play" component={<PlayForm />}>
             <PlayForm encode={encode} />
           </Route>
-        </Switch>
+        </Routes>
         <div className="post__content">
           {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>
