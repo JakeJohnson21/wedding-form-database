@@ -14,7 +14,7 @@ function FoodForm({ encode }) {
       }}
       validationSchema={restaurantSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/", {
+        fetch("/restaurants", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "restaurants", ...values }),
@@ -46,6 +46,7 @@ function FoodForm({ encode }) {
             component="span"
           />
         </label>
+        ~
         <label className="form__label">
           Restaurant website:
           <Field
