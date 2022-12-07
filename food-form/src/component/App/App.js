@@ -28,29 +28,29 @@ function App() {
         </Routes>
         <form name="restaurants" data-netlify="true" hidden>
           <input type="hidden" name="restaurants" value="restaurant" />
-          <input type="text" name="name" />
-          <input type="text" name="address" />
-          <input type="text" name="url" />
-          <textarea name="description" />
-          <input type="text" name="price" />
-          <input type="text" name="attire" />
+          <input type="hidden" name="name" />
+          <input type="hidden" name="address" />
+          <input type="hidden" name="url" />
+          <textarea type="hidden" name="description" />
+          <input type="hidden" name="price" />
+          <input type="hidden" name="attire" />
         </form>
         <form name="hotels" data-netlify="true" hidden>
           <input type="hidden" name="hotels" value="hotel" />
-          <input type="text" name="name" />
-          <input type="text" name="address" />
-          <input type="text" name="url" />
-          <textarea name="description" />
-          <input type="text" name="price" />
-          <input type="text" name="distance" />
+          <input type="hidden" name="name" />
+          <input type="hidden" name="address" />
+          <input type="hidden" name="url" />
+          <textarea type="hidden" name="description" />
+          <input type="hidden" name="price" />
+          <input type="hidden" name="distance" />
         </form>
         <form name="adventures" data-netlify="true" hidden>
           <input type="hidden" name="adventures" value="adventure" />
-          <input type="text" name="name" />
-          <input type="text" name="address" />
-          <input type="text" name="url" />
-          <textarea name="description" />
-          <input type="text" name="cost" />
+          <input type="hidden" name="name" />
+          <input type="hidden" name="address" />
+          <input type="hidden" name="url" />
+          <textarea type="hidden" name="description" />
+          <input type="hidden" name="cost" />
         </form>
         <div className="post__content">
           {/* {restaurantList.map((item) => (
