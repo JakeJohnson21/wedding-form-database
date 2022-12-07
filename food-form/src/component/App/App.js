@@ -27,7 +27,7 @@ function App() {
           <Route path="/play" name="play" element={<PlayForm />} />
         </Routes>
         <form name="restaurants" data-netlify="true" hidden>
-          <input type="hidden" name="restaurants" value="restaurant" />
+          <input type="hidden" name="restaurants" value="restaurants" />
           <input type="hidden" name="name" />
           <input type="hidden" name="address" />
           <input type="hidden" name="url" />
@@ -36,7 +36,7 @@ function App() {
           <input type="hidden" name="attire" />
         </form>
         <form name="hotels" data-netlify="true" hidden>
-          <input type="hidden" name="hotels" value="hotel" />
+          <input type="hidden" name="hotels" value="hotels" />
           <input type="hidden" name="name" />
           <input type="hidden" name="address" />
           <input type="hidden" name="url" />
@@ -45,7 +45,7 @@ function App() {
           <input type="hidden" name="distance" />
         </form>
         <form name="adventures" data-netlify="true" hidden>
-          <input type="hidden" name="adventures" value="adventure" />
+          <input type="hidden" name="adventures" value="adventures" />
           <input type="hidden" name="name" />
           <input type="hidden" name="address" />
           <input type="hidden" name="url" />

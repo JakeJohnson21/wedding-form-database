@@ -21,7 +21,7 @@ function FoodForm() {
       }}
       validationSchema={restaurantSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/restaurants", {
+        fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "restaurants", ...values }),

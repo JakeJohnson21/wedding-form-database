@@ -21,7 +21,7 @@ function StayForm() {
       }}
       validationSchema={hotelSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/hotels", {
+        fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "hotels", ...values }),
