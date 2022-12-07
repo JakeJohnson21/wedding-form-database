@@ -26,6 +26,32 @@ function App() {
           <Route path="/stay" name="stay" element={<StayForm />} />
           <Route path="/play" name="play" element={<PlayForm />} />
         </Routes>
+        <form name="restaurants" data-netlify="true" hidden>
+          <input type="hidden" name="restaurants" value="restaurant" />
+          <input type="text" name="name" />
+          <input type="text" name="address" />
+          <input type="text" name="url" />
+          <textarea name="description" />
+          <input type="text" name="price" />
+          <input type="text" name="attire" />
+        </form>
+        <form name="hotels" data-netlify="true" hidden>
+          <input type="hidden" name="hotels" value="hotel" />
+          <input type="text" name="name" />
+          <input type="text" name="address" />
+          <input type="text" name="url" />
+          <textarea name="description" />
+          <input type="text" name="price" />
+          <input type="text" name="distance" />
+        </form>
+        <form name="adventures" data-netlify="true" hidden>
+          <input type="hidden" name="adventures" value="adventure" />
+          <input type="text" name="name" />
+          <input type="text" name="address" />
+          <input type="text" name="url" />
+          <textarea name="description" />
+          <input type="text" name="cost" />
+        </form>
         <div className="post__content">
           {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>
