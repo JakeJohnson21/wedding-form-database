@@ -1,7 +1,14 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { hotelSchema } from "../utils/stay";
 
-function StayForm({ encode }) {
+function StayForm() {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
   return (
     <Formik
       initialValues={{
@@ -14,7 +21,7 @@ function StayForm({ encode }) {
       }}
       validationSchema={hotelSchema}
       onSubmit={(values, { resetForm, setSubmitting }) => {
-        fetch("/", {
+        fetch("/hotels", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "hotels", ...values }),

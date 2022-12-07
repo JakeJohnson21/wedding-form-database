@@ -6,14 +6,6 @@ import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
   return (
     <div className="page">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
@@ -30,21 +22,9 @@ function App() {
           </Link>
         </nav>
         <Routes>
-          <Route
-            path="/food"
-            name="food"
-            element={<FoodForm encode={encode} />}
-          />
-          <Route
-            path="/stay"
-            name="stay"
-            element={<StayForm encode={encode} />}
-          />
-          <Route
-            path="/play"
-            name="play"
-            element={<PlayForm encode={encode} />}
-          />
+          <Route path="/food" name="food" element={<FoodForm />} />
+          <Route path="/stay" name="stay" element={<StayForm />} />
+          <Route path="/play" name="play" element={<PlayForm />} />
         </Routes>
         <div className="post__content">
           {/* {restaurantList.map((item) => (
