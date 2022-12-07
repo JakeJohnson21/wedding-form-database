@@ -1,21 +1,21 @@
 // import { useEffect, useState } from "react";
-// import FoodForm from "../FoodForm/FoodForm";
+import FoodForm from "../FoodForm/FoodForm";
 import NetlifyForm from "../NetlifyForm/NetlifyForm";
 import "./App.css";
 
 function App() {
-  // const encode = (data) => {
-  //   return Object.keys(data)
-  //     .map(
-  //       (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-  //     )
-  //     .join("&");
-  // };
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   return (
     <div className="App">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
-      {/* <FoodForm encode={encode} /> */}
+      <FoodForm encode={encode} />
       <NetlifyForm />
       <div className="post__content">
         {/* {restaurantList.map((item) => (
