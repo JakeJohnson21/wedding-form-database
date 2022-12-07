@@ -4,8 +4,26 @@ import PlayForm from "../PlayForm";
 import StayForm from "../StayForm";
 import "./App.css";
 import { Routes, Route, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 function App() {
+  const baseURL = "https://api.netlify.com/api/v1";
+  const [restaurants, setRestaurants] = useState([]);
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  const getSubmissions = (formId) => {
+    fetch(`/${baseURL}/forms/${formId}/submissions`);
+    setRestaurants(getSubmissions("restaurants"));
+  };
+
+  console.log(restaurants);
   return (
     <div className="page">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
@@ -22,9 +40,21 @@ function App() {
           </Link>
         </nav>
         <Routes>
-          <Route path="/food" name="food" element={<FoodForm />} />
-          <Route path="/stay" name="stay" element={<StayForm />} />
-          <Route path="/play" name="play" element={<PlayForm />} />
+          <Route
+            path="/food"
+            name="food"
+            element={<FoodForm encode={encode} />}
+          />
+          <Route
+            path="/stay"
+            name="stay"
+            element={<StayForm encode={encode} />}
+          />
+          <Route
+            path="/play"
+            name="play"
+            element={<PlayForm encode={encode} />}
+          />
         </Routes>
 
         <div className="post__content">

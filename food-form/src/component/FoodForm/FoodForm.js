@@ -1,14 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { restaurantSchema } from "../../utils/food";
 
-function FoodForm() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+function FoodForm({ encode }) {
   return (
     <Formik
       initialValues={{

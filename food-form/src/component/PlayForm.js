@@ -1,14 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { funSchema } from "../utils/adventure";
 
-function PlayForm() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+function PlayForm({ encode }) {
   return (
     <Formik
       initialValues={{

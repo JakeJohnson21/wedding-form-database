@@ -1,14 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { hotelSchema } from "../utils/stay";
 
-function StayForm() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+function StayForm({ encode }) {
   return (
     <Formik
       initialValues={{
