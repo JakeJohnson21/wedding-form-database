@@ -3,10 +3,18 @@ import FoodForm from "../FoodForm/FoodForm";
 import "./App.css";
 
 function App() {
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
   return (
     <div className="App">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
-      <FoodForm />
+      <FoodForm encode={encode} />
       <div className="post__content">
         {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>

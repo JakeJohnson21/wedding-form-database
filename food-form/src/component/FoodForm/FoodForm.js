@@ -1,15 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { restaurantSchema } from "../../utils/food";
 
-function FoodForm() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
-
+function FoodForm({ encode }) {
   return (
     <Formik
       initialValues={{
@@ -38,12 +30,7 @@ function FoodForm() {
           });
       }}
     >
-      <Form
-        className="form"
-        name="restaurants"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-      >
+      <Form className="form" name="restaurants" data-netlify="true">
         <label className="form__label">
           Restaurant Name:
           <Field name="name" className="form__input" type="text" />
