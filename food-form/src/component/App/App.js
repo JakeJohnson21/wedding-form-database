@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 import FoodForm from "../FoodForm/FoodForm";
+import NetlifyForm from "../NetlifyForm/NetlifyForm";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <div className="App">
       {/* <StayForm onStayFormSubmit={handleAddNewHotel} /> */}
       <FoodForm encode={encode} />
+      <NetlifyForm />
       <div className="post__content">
         {/* {restaurantList.map((item) => (
           <div className="post" key={item._id}>
