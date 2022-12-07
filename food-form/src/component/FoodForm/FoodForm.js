@@ -1,7 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { restaurantSchema } from "../../utils/food";
 
-function FoodForm({ onAddSubmit }) {
+function FoodForm() {
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -21,7 +21,7 @@ function FoodForm({ onAddSubmit }) {
         attire: "",
       }}
       validationSchema={restaurantSchema}
-      onSubmit={(values, actions) => {
+      onSubmit={(values, { resetForm, setSubmitting }) => {
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -29,12 +29,13 @@ function FoodForm({ onAddSubmit }) {
         })
           .then(() => {
             alert("success");
-            actions.resetForm();
+            setSubmitting(false);
+            resetForm();
           })
           .catch(() => {
             alert("Error");
-          })
-          .finally(() => actions.setSubmitting(false));
+            setSubmitting(false);
+          });
       }}
     >
       <Form className="form" name="restaurants" data-netlify={true}>
