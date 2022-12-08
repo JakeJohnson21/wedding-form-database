@@ -12,10 +12,12 @@
   right: 0;
   bottom: 0;
   text-align: center;
+  overflow-y: scroll;
   background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
 }
 .app {
   margin: 80px auto;
+  position: relative;
 }
 .post__content {
   padding-top: 70px;
@@ -90,10 +92,17 @@ p {
 }
 
 @media screen and (max-width: 600px) {
+  .app {
+    margin-top: 0;
+  }
   .nav {
     flex-direction: column;
+    margin-bottom: 70px;
   }
   .nav__button {
-    margin: 20px;
+    padding: 13px;
+  }
+  .nav__button {
+    margin: 0px;
   }
 }

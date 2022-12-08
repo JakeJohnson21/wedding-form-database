@@ -52,3 +52,23 @@
   right: 30px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+  .form {
+    width: 100vw;
+    justify-content: center;
+  }
+  .form__label {
+    width: 90vw;
+    margin: 30px auto 0 auto;
+    padding-right: 0;
+    font-size: 16px;
+  }
+  .form__input {
+    max-width: 100%;
+  }
+  .form__error {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
