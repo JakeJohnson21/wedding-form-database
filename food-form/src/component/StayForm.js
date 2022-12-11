@@ -1,5 +1,9 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
+import { Formik, Form } from "formik";
 import { hotelSchema } from "../utils/stay";
+import TextAreaInput from "./TextAreaInput";
+import TextInput from "./TextInput";
+
+// hotel form_id 639110e975aa5200085738f1
 
 function StayForm() {
   const encode = (data) => {
@@ -39,59 +43,12 @@ function StayForm() {
     >
       <Form className="form" name="hotels" data-netlify="true">
         <input type="hidden" name="hotels" value="hotel" />
-        <label className="form__label">
-          Hotel Name:
-          <Field name="name" className="form__input" type="text" />
-          <ErrorMessage name="name" className="form__error" component="span" />
-        </label>
-        <label className="form__label">
-          Hotel address
-          <Field name="address" className="form__input" type="text" />
-          <ErrorMessage
-            name="address"
-            className="form__error"
-            component="span"
-          />
-        </label>
-        <label className="form__label">
-          Website:
-          <Field
-            name="url"
-            placeholder="http://"
-            className="form__input"
-            type="text"
-          />
-          <ErrorMessage name="url" className="form__error" component="span" />
-        </label>
-        <label className="form__label">
-          Description:
-          <Field
-            id="textarea"
-            name="description"
-            as="textarea"
-            className="form__input"
-            type="text"
-          />
-          <ErrorMessage
-            name="description"
-            className="form__error"
-            component="span"
-          />
-        </label>
-        <label className="form__label">
-          Price range
-          <Field name="price" className="form__input" type="text" />
-          <ErrorMessage name="price" className="form__error" component="span" />
-        </label>
-        <label className="form__label">
-          Distance from venue:
-          <Field name="distance" className="form__input" type="text" />
-          <ErrorMessage
-            name="distance"
-            className="form__error"
-            component="span"
-          />
-        </label>
+        <TextInput name="name">Hotel name: </TextInput>
+        <TextInput name="address">Address:</TextInput>
+        <TextInput name="url">Website URL:</TextInput>
+        <TextAreaInput name="description">Hotel description</TextAreaInput>
+        <TextInput name="price">Price range</TextInput>
+        <TextInput name="distance">Distance from venue</TextInput>
         <button type="submit" className="submit__button">
           Submit
         </button>
