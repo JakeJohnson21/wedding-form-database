@@ -40,7 +40,7 @@ function App() {
             name="play"
             element={<PlayForm dataArray={dataArray} setData={setDataArray} />}
           />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
 
         <div className="post__content"></div>
