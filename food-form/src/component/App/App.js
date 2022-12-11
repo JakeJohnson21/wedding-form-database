@@ -5,7 +5,7 @@ import StayForm from "../StayForm";
 import "./App.css";
 import { useState } from "react";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 function App() {
   const [dataArray, setDataArray] = useState([]);
@@ -40,6 +40,7 @@ function App() {
             name="play"
             element={<PlayForm dataArray={dataArray} setData={setDataArray} />}
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
 
         <div className="post__content"></div>
