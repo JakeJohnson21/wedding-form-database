@@ -14,8 +14,8 @@ function Api({ formId, name, money, optional, setData, dataArray }) {
 
   return (
     <div className="post__wrapper">
-      {dataArray.map((item, index) => (
-        <div className="post" key={index}>
+      {dataArray.map((item) => (
+        <div className="post" key={item.id}>
           <label className="post-label">
             {name}
             <p className="post-text">{item.data.name}</p>
