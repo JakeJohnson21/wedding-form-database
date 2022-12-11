@@ -15,12 +15,14 @@ function Api({ formId, name, money, optional, click }) {
       }
     );
     try {
+      alert("Success! reload the page to refresh list");
       const filtered = dataArray.filter((item) => item.id !== post_id);
       const deleted = dataArray.filter((item) => item.id === post_id);
       await filtered;
       return deleted;
     } catch (err) {
       console.error(`Error: ${err.status}`);
+      alert("Request failed. Tell Jake.");
     }
   };
   useEffect(() => {
