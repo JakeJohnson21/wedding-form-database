@@ -6,9 +6,7 @@ import TextInput from "../TextInput";
 
 // restaurant form_id 638ff9b427bdc9000845d676
 // site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
-function FoodForm() {
-  // const [dataArray, setDataArray] = useState([]);
-
+function FoodForm({ dataArray, setData }) {
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -38,6 +36,7 @@ function FoodForm() {
             .then(() => {
               alert("success");
               setSubmitting(false);
+              setData({ values }, ...dataArray);
               resetForm();
             })
             .catch(() => {
@@ -66,7 +65,8 @@ function FoodForm() {
         name="Restaurant Name:"
         money="Price Range:"
         optional="Attire:"
-        update={Formik.onSubmit}
+        dataArray={dataArray}
+        setData={setData}
       />
     </section>
   );

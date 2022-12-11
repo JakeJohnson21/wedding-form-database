@@ -1,19 +1,17 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-function Api({ formId, name, money, optional, update }) {
-  const [dataArray, setDataArray] = useState([]);
-
+function Api({ formId, name, money, optional, setData, dataArray }) {
   useEffect(() => {
     const populateData = async () => {
       const get = await fetch(
         `https://v1.nocodeapi.com/jakejohnson/netlify/CWwIQhITDuRgHSuk/listFormSubmissions?form_id=${formId}&per_page=20`
       );
       const response = await get.json();
-      setDataArray(response);
+      setData(response);
     };
     populateData();
-  }, [update]);
-  console.log("dataArray: ", dataArray);
+  }, []);
+
   return (
     <div className="post__wrapper">
       {dataArray.map((item, index) => (
