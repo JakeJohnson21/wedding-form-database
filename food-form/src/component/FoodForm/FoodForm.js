@@ -36,7 +36,7 @@ function FoodForm({ dataArray, setData }) {
             .then(() => {
               alert("success");
               setSubmitting(false);
-              dataArray.push(values);
+              setData(values, ...dataArray);
               resetForm();
             })
             .catch(() => {
