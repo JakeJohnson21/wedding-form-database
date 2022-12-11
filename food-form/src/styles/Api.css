@@ -1,0 +1,35 @@
+.page__wrapper {
+  height: 100%;
+}
+.post {
+  padding: 40px;
+  margin: 20px;
+  z-index: 2;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+.post__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  margin: auto;
+  z-index: 2;
+  width: 90vw;
+  margin: 100px auto;
+}
+.post-label {
+  font-size: 18px;
+  color: white;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.post-text {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 0;
+}
