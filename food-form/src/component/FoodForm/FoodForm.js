@@ -66,6 +66,7 @@ function FoodForm() {
         name="Restaurant Name:"
         money="Price Range:"
         optional="Attire:"
+        update={Formik.onSubmit}
       />
     </section>
   );

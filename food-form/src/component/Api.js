@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Api({ formId, name, money, optional }) {
+function Api({ formId, name, money, optional, update }) {
   const [dataArray, setDataArray] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function Api({ formId, name, money, optional }) {
       setDataArray(response);
     };
     populateData();
-  }, []);
+  }, [update]);
   console.log("dataArray: ", dataArray);
   return (
     <div className="post__wrapper">
