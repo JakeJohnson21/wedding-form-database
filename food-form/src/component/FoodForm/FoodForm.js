@@ -6,7 +6,7 @@ import TextInput from "../TextInput";
 
 // restaurant form_id 638ff9b427bdc9000845d676
 // site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
-function FoodForm({ dataArray, setData }) {
+function FoodForm() {
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -37,7 +37,6 @@ function FoodForm({ dataArray, setData }) {
               alert("success");
               setSubmitting(false);
               resetForm();
-              setData(...values, ...dataArray);
             })
             .catch(() => {
               alert("Error");
@@ -62,12 +61,9 @@ function FoodForm({ dataArray, setData }) {
       </Formik>
       <Api
         formId="638ff9b427bdc9000845d676"
-        name="Restaurant Name:"
-        money="Price Range:"
+        name="Restaurant name:"
+        money="Price range:"
         optional="Attire:"
-        dataArray={dataArray}
-        setData={setData}
-        submit={Formik.onSubmit}
       />
     </section>
   );

@@ -1,16 +1,18 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-function Api({ formId, name, money, optional, submit, setData, dataArray }) {
+function Api({ formId, name, money, optional }) {
+  const [dataArray, setDataArray] = useState([]);
+
   useEffect(() => {
     const populateData = async () => {
       const get = await fetch(
         `https://v1.nocodeapi.com/jakejohnson/netlify/CWwIQhITDuRgHSuk/listFormSubmissions?form_id=${formId}&per_page=20`
       );
       const response = await get.json();
-      setData(response);
+      setDataArray(response);
     };
     populateData();
-  }, [submit]);
+  }, []);
 
   return (
     <div className="post__wrapper">
@@ -42,8 +44,15 @@ function Api({ formId, name, money, optional, submit, setData, dataArray }) {
             )}
           </label>
           <label className="post-label">
-            {optional}
-            {optional ? <p className="post-text">{item.data.name}</p> : ""}
+            {(() => {
+              if (optional === "Attire:") {
+                return <p className="post-text">{item.data.attire}</p>;
+              } else if (optional === "Distance from venue:") {
+                return <p className="post-text">{item.data.distance}</p>;
+              } else {
+                return;
+              }
+            })()}
           </label>
         </div>
       ))}
