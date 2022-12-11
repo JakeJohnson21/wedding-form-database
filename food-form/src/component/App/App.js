@@ -2,6 +2,7 @@
 import FoodForm from "../FoodForm/FoodForm";
 import PlayForm from "../PlayForm";
 import StayForm from "../StayForm";
+import Home from "../Home/Home";
 import "./App.css";
 import { useState } from "react";
 
@@ -20,29 +21,31 @@ function App() {
     <div className="page">
       <div className="app">
         <nav className="nav">
-          <Link to="/food" className="nav__link">
+          <Link to="/jakeisthebestform/food" className="nav__link">
             <button className="nav__button">Restaurant</button>
           </Link>
-          <Link to="/stay" className="nav__link">
+          <Link to="/jakeisthebestform/stay" className="nav__link">
             <button className="nav__button">Hotel</button>
           </Link>
-          <Link to="/play" className="nav__link">
+          <Link to="/jakeisthebestform/play" className="nav__link">
             <button className="nav__button">Explore</button>
           </Link>
         </nav>
         <Routes>
+          <Route path="/" name="home" element={<Home />} />
+
           <Route
-            path="/food"
+            path="/jakeisthebestform/food"
             name="food"
             element={<FoodForm encode={encode} />}
           />
           <Route
-            path="/stay"
+            path="/jakeisthebestform/stay"
             name="stay"
             element={<StayForm encode={encode} />}
           />
           <Route
-            path="/play"
+            path="/jakeisthebestform/play"
             name="play"
             element={<PlayForm encode={encode} />}
           />

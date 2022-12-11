@@ -16,3 +16,4 @@ code {
 @import url(component/App/App.css);
 @import url(fonts/inter.css);
 @import url(styles/Api.css);
+@import url(./component/Home/Home.css);

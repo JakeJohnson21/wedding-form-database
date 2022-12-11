@@ -1,0 +1,22 @@
+.homepage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197, 196, 188);
+  z-index: 1;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-title {
+  font-size: 12vh;
+  font-weight: 200;
+  padding: 40px;
+  color: rgb(252, 252, 252);
+}
+.heading-title:hover {
+  font-weight: 600;
+}
