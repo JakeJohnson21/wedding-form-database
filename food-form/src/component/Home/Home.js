@@ -1,8 +1,12 @@
 function Home() {
   return (
     <section className="homepage">
-      <h1 className="heading-title">Kyle</h1>
-      <h1 className="heading-title">Farial</h1>
+      <span className="heading-title_wrap">
+        <h1 className="heading-title">Kyle</h1>
+        <h1 className="heading-title">Farial</h1>
+      </span>
+
+      <h1 className="heading-date">07 14 2023</h1>
     </section>
   );
 }
