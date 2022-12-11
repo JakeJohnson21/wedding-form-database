@@ -8,7 +8,13 @@ import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
 function App() {
-  const [dataArray, setDataArray] = useState([]);
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
 
   return (
     <div className="page">
@@ -28,17 +34,17 @@ function App() {
           <Route
             path="/food"
             name="food"
-            element={<FoodForm dataArray={dataArray} setData={setDataArray} />}
+            element={<FoodForm encode={encode} />}
           />
           <Route
             path="/stay"
             name="stay"
-            element={<StayForm dataArray={dataArray} setData={setDataArray} />}
+            element={<StayForm encode={encode} />}
           />
           <Route
             path="/play"
             name="play"
-            element={<PlayForm dataArray={dataArray} setData={setDataArray} />}
+            element={<PlayForm encode={encode} />}
           />
         </Routes>
 

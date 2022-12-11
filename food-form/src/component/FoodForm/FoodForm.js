@@ -7,16 +7,9 @@ import TextInput from "../TextInput";
 
 // restaurant form_id 638ff9b427bdc9000845d676
 // site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
-function FoodForm() {
+function FoodForm({ encode }) {
   const [clickCount, setClickCount] = useState(0);
 
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
   const handleClickCounter = () => {
     let plusOne = clickCount + 1;
     setClickCount(plusOne);

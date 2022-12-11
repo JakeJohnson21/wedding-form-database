@@ -3,10 +3,30 @@ import { useState, useEffect } from "react";
 function Api({ formId, name, money, optional, click }) {
   const [dataArray, setDataArray] = useState([]);
 
+  const deletePost = async (post_id) => {
+    const deleteRequest = await fetch(
+      `https://api.netlify.com/api/v1/submissions/${post_id}`,
+      {
+        method: "DELETE",
+        headers: {
+          Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    try {
+      const filtered = dataArray.filter((item) => item.id !== post_id);
+      const deleted = dataArray.filter((item) => item.id === post_id);
+      await filtered;
+      return deleted;
+    } catch (err) {
+      console.error(`Error: ${err.status}`);
+    }
+  };
   useEffect(() => {
     const populateData = async () => {
       const get = await fetch(
-        `https://api.netlify.com/api/v1/sites/b93b5d62-fdd1-4c48-ba6a-b6d26cfecc11/forms/${formId}/submissions`,
+        `https://api.netlify.com/api/v1/forms/${formId}/submissions`,
         {
           headers: {
             Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
@@ -26,6 +46,7 @@ function Api({ formId, name, money, optional, click }) {
     <div className="post__wrapper">
       {dataArray.map((item) => (
         <div className="post" key={item.id}>
+          <div className="trash-icon" onClick={() => deletePost(item.id)}></div>
           <label className="post-label">
             {name}
             <p className="post-text">{item.data.name}</p>

@@ -1,12 +1,20 @@
 import { Formik, Form } from "formik";
 import { funSchema } from "../utils/adventure";
 import Api from "./Api";
+import { useState } from "react";
 import TextAreaInput from "./TextAreaInput";
 import TextInput from "./TextInput";
 
 // adventure form_id 639110ea75aa5200085738f2
 
 function PlayForm({ encode }) {
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleClickCounter = () => {
+    let plusOne = clickCount + 1;
+    setClickCount(plusOne);
+  };
+
   return (
     <section className="page__wrapper">
       <Formik
@@ -42,7 +50,11 @@ function PlayForm({ encode }) {
           <TextInput name="url">Website URL:</TextInput>
           <TextAreaInput name="description">Description</TextAreaInput>
           <TextInput name="price">Cost?</TextInput>
-          <button type="submit" className="submit__button">
+          <button
+            type="submit"
+            className="submit__button"
+            onClick={handleClickCounter}
+          >
             Submit
           </button>
         </Form>

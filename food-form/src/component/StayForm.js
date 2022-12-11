@@ -1,12 +1,20 @@
 import { Formik, Form } from "formik";
 import { hotelSchema } from "../utils/stay";
 import Api from "./Api";
+import { useState } from "react";
 import TextAreaInput from "./TextAreaInput";
 import TextInput from "./TextInput";
 
 // hotel form_id 639110e975aa5200085738f1
 
 function StayForm({ encode }) {
+  const [clickCount, setClickCount] = useState(0);
+
+  const handleClickCounter = () => {
+    let plusOne = clickCount + 1;
+    setClickCount(plusOne);
+  };
+
   return (
     <section className="page__wrapper">
       <Formik
@@ -44,7 +52,11 @@ function StayForm({ encode }) {
           <TextAreaInput name="description">Hotel description</TextAreaInput>
           <TextInput name="price">Price range</TextInput>
           <TextInput name="distance">Distance from venue</TextInput>
-          <button type="submit" className="submit__button">
+          <button
+            type="submit"
+            className="submit__button"
+            onClick={handleClickCounter}
+          >
             Submit
           </button>
         </Form>
@@ -54,6 +66,7 @@ function StayForm({ encode }) {
         name="Hotel name:"
         money="Price range:"
         optional="Distance from venue"
+        click={clickCount}
       />
     </section>
   );
