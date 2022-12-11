@@ -10,7 +10,7 @@ function Api({ formId, name, money, optional, setData, dataArray }) {
       setData(response);
     };
     populateData();
-  }, []);
+  }, [dataArray]);
 
   return (
     <div className="post__wrapper">
