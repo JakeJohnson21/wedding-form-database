@@ -1,18 +1,25 @@
 import { Formik, Form } from "formik";
 import { restaurantSchema } from "../../utils/food";
 import Api from "../Api";
+import { useState } from "react";
 import TextAreaInput from "../TextAreaInput";
 import TextInput from "../TextInput";
 
 // restaurant form_id 638ff9b427bdc9000845d676
 // site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
 function FoodForm() {
+  const [clickCount, setClickCount] = useState(0);
+
   const encode = (data) => {
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
       )
       .join("&");
+  };
+  const handleClickCounter = () => {
+    let plusOne = clickCount + 1;
+    setClickCount(plusOne);
   };
 
   return (
@@ -54,7 +61,11 @@ function FoodForm() {
           </TextAreaInput>
           <TextInput name="price">Price range</TextInput>
           <TextInput name="attire">Attire</TextInput>
-          <button type="submit" className="submit__button">
+          <button
+            type="submit"
+            className="submit__button"
+            onClick={handleClickCounter}
+          >
             Submit
           </button>
         </Form>
@@ -64,6 +75,7 @@ function FoodForm() {
         name="Restaurant name:"
         money="Price range:"
         optional="Attire:"
+        click={clickCount}
       />
     </section>
   );
