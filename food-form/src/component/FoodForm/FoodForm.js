@@ -67,6 +67,7 @@ function FoodForm({ dataArray, setData }) {
         optional="Attire:"
         dataArray={dataArray}
         setData={setData}
+        submit={Formik.onSubmit}
       />
     </section>
   );

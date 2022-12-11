@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function Api({ formId, name, money, optional, setData, dataArray }) {
+function Api({ formId, name, money, optional, submit, setData, dataArray }) {
   useEffect(() => {
     const populateData = async () => {
       const get = await fetch(
@@ -10,7 +10,7 @@ function Api({ formId, name, money, optional, setData, dataArray }) {
       setData(response);
     };
     populateData();
-  }, [dataArray]);
+  }, [submit]);
 
   return (
     <div className="post__wrapper">
