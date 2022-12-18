@@ -44,7 +44,7 @@ function FoodForm({ encode }) {
             });
         }}
       >
-        <Form className="form" name="restaurants" data-netlify="true">
+        <Form className="best-form" name="restaurants" data-netlify="true">
           <input type="hidden" name="restaurants" value="restaurant" />
           <TextInput name="name">Restaurant name: </TextInput>
           <TextInput name="address">Address:</TextInput>

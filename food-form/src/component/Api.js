@@ -45,41 +45,42 @@ function Api({ formId, name, money, optional, click }) {
   console.log(dataArray);
 
   return (
-    <div className="post__wrapper">
+    <div className="best-post__wrapper">
       {dataArray.map((item) => (
-        <div className="post" key={item.id}>
+        <div className="best-post" key={item.id}>
           <div className="trash-icon" onClick={() => deletePost(item.id)}></div>
-          <label className="post-label">
+          <label className="best-post-label">
             {name}
-            <p className="post-text">{item.data.name}</p>
+            <p className="best-post-text">{item.data.name}</p>
           </label>
-          <label className="post-label">
+          <label className="best-post-label">
             Address:
-            <p className="post-text">{item.data.address}</p>
+            <p className="best-post-text">{item.data.address}</p>
           </label>
 
-          <label className="post-label">
+          <label className="best-post-label">
             Website URL:
-            <p className="post-text">{item.data.url}</p>
+            <p className="best-post-text">{item.data.url}</p>
           </label>
-          <label className="post-label">
+          <label className="best-post-label">
             Description:
-            <p className="post-text">{item.data.description}</p>
+            <p className="best-post-text">{item.data.description}</p>
           </label>
-          <label className="post-label">
+          <label className="best-post-label">
             {money}
-            {money === "price" ? (
-              <p className="post-text">{item.data.price}</p>
+            {money === "Price range:" ? (
+              <p className="best-post-text">{item.data.price}</p>
             ) : (
-              <p className="post-text">{item.data.cost}</p>
+              <p className="best-post-text">{item.data.cost}</p>
             )}
           </label>
-          <label className="post-label">
+          <label className="best-post-label">
+            {optional}
             {(() => {
               if (optional === "Attire:") {
-                return <p className="post-text">{item.data.attire}</p>;
+                return <p className="best-post-text">{item.data.attire}</p>;
               } else if (optional === "Distance from venue:") {
-                return <p className="post-text">{item.data.distance}</p>;
+                return <p className="best-post-text">{item.data.distance}</p>;
               } else {
                 return;
               }

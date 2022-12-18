@@ -1,0 +1,88 @@
+.page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  overflow-y: scroll;
+  background-image: linear-gradient(to top, #4481eb 0%, #04befe 100%);
+}
+.app {
+  margin: 80px auto;
+  position: relative;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+p {
+  margin: 0;
+  margin-top: 6px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav {
+  width: 80vw;
+  max-width: 700px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: space-around;
+}
+.nav__button {
+  font-size: 30px;
+  padding: 20px;
+  font-family: "roboto";
+  color: rgb(239, 238, 238);
+  font-weight: 700;
+  width: 180px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+}
+.nav__button:hover {
+  border-bottom: 4px solid rgb(205, 205, 205);
+  color: white;
+}
+.nav__button:focus {
+  font-weight: 700;
+  color: white;
+}
+.button-active {
+  font-size: 30px;
+  padding: 20px;
+  color: rgb(62, 63, 65);
+  width: 180px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+}
+
+@media screen and (max-width: 740px) {
+  .nav {
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .app {
+    margin-top: 0;
+  }
+  .nav {
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+  .nav__button {
+    padding: 13px;
+  }
+  .nav__button {
+    margin: 0px;
+  }
+}

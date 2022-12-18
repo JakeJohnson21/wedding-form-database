@@ -44,7 +44,7 @@ function StayForm({ encode }) {
             });
         }}
       >
-        <Form className="form" name="hotels" data-netlify="true">
+        <Form className="best-form" name="hotels" data-netlify="true">
           <input type="hidden" name="hotels" value="hotel" />
           <TextInput name="name">Hotel name: </TextInput>
           <TextInput name="address">Address:</TextInput>
@@ -65,7 +65,7 @@ function StayForm({ encode }) {
         formId="639110e975aa5200085738f1"
         name="Hotel name:"
         money="Price range:"
-        optional="Distance from venue"
+        optional="Distance from venue:"
         click={clickCount}
       />
     </section>

@@ -1,0 +1,44 @@
+.mobile__nav_wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: gray;
+  transform: translateX(0%);
+  transition: 0.5s 0s ease-in-out;
+  z-index: 3;
+}
+
+.mobile__nav_open {
+  transform: translateX(0%);
+  background-color: gray;
+  transition: 0.5s 0s ease-in-out;
+  z-index: 2;
+}
+@media screen and (max-width: 640px) {
+  .mobile__nav_wrapper {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: gray;
+    transform: translateX(100%);
+    transition: 0.5s 0s ease-in-out;
+    z-index: 3;
+  }
+
+  .mobile__nav_open {
+    transform: translateX(0%);
+    background-color: gray;
+    transition: 0.5s 0s ease-in-out;
+    z-index: 2;
+  }
+}

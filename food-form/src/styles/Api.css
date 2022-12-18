@@ -1,7 +1,4 @@
-.page__wrapper {
-  height: 100%;
-}
-.post {
+.best-post {
   padding: 40px;
   margin: 20px;
   z-index: 2;
@@ -13,7 +10,7 @@
   position: relative;
 }
 
-.post__wrapper {
+.best-post__wrapper {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
@@ -22,13 +19,14 @@
   width: 90vw;
   margin: 100px auto;
 }
-.post-label {
-  font-size: 18px;
-  color: white;
-  margin: 0 0 10px;
+.best-post-label {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(31, 46, 80);
+  margin: 0 0 14px;
   padding: 0;
 }
-.post-text {
+.best-post-text {
   color: white;
   font-weight: 600;
   font-size: 20px;

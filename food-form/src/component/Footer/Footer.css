@@ -1,0 +1,16 @@
+.footer {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+}
+.footer__date {
+  color: white;
+  font-weight: 200;
+  width: fit-content;
+  font-size: 80px;
+  margin: auto;
+  padding-right: 50px;
+}

@@ -1,0 +1,62 @@
+.nav__wrapper {
+  max-width: 1600px;
+  width: 90vw;
+  padding-top: 5vmin;
+  margin: auto;
+}
+.nav__button-wrapper_home {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__button-wrapper_sub {
+  grid-area: "nav";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  display: flex;
+  height: 40%;
+  margin: auto 0;
+  width: 180px;
+  flex-direction: column;
+}
+.nav__button {
+  padding: 0;
+  padding-bottom: 10px;
+  font-family: "Lexend";
+  width: fit-content;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-shadow: 0px 4px 10px rgba(47, 47, 47, 0.35);
+}
+.nav__button_home {
+  margin-top: 10px;
+}
+
+.nav__button:hover {
+  transition: all 0.4s ease;
+  text-shadow: 0px 8px 25px rgba(47, 47, 47, 0.45);
+  border-bottom: 4px solid rgb(158, 152, 139);
+}
+.nav__link {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+}
+@media screen and (max-width: 1240px) {
+  .nav__button {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .nav__button {
+    width: 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .nav__wrapper {
+    display: none;
+    width: 100vw;
+    background-color: gray;
+  }
+}

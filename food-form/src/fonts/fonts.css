@@ -1,0 +1,136 @@
+/* Adobe Fonts */
+@import url("https://use.typekit.net/wxe5swg.css");
+
+/* Google Fonts */
+@font-face {
+  font-family: "Heebo", sans-serif;
+  src: url(Heebo-300-Light.ttf) format(ttf);
+  font-weight: 300;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Heebo", sans-serif;
+  src: url(Heebo-400-Regular.ttf) format(ttf);
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Heebo", sans-serif;
+  src: url(Heebo-500-Medium.ttf) format(ttf);
+  font-weight: 500;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Heebo", sans-serif;
+  src: url(Heebo-600-SemiBold.ttf) format(ttf);
+  font-weight: 600;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Heebo", sans-serif;
+  src: url(Heebo-700-Bold.ttf) format(ttf);
+  font-weight: 700;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-300-Light.ttf) format(ttf);
+  font-weight: 300;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-300-LightItalic.ttf) format(ttf);
+  font-weight: 300;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-400-Italic.ttf) format(ttf);
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-400-Regular.ttf) format(ttf);
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-500-MediumItalic.ttf) format(ttf);
+  font-weight: 500;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-500-Medium.ttf) format(ttf);
+  font-weight: 500;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-600-SemiBold.ttf) format(ttf);
+  font-weight: 600;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-600-SemiBoldItalic.ttf) format(ttf);
+  font-weight: 600;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-700-Bold.ttf) format(ttf);
+  font-weight: 700;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-700-BoldItalic.ttf) format(ttf);
+  font-weight: 700;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-900-Black.ttf) format(ttf);
+  font-weight: 900;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter Tight", sans-serif;
+  src: url(InterTight-900-BlackItalic.ttf) format(ttf);
+  font-weight: 900;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Lexend", sans-serif;
+  src: url(Lexend-300-Light.ttf) format(ttf);
+  font-weight: 300;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Lexend", sans-serif;
+  src: url(Lexend-400-Regular.ttf) format(ttf);
+  font-weight: 400;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Lexend", sans-serif;
+  src: url(Lexend-500-Medium.ttf) format(ttf);
+  font-weight: 500;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Lexend", sans-serif;
+  src: url(Lexend-700-Bold.ttf) format(ttf);
+  font-weight: 700;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Lexend", sans-serif;
+  src: url(Lexend-900-Black.ttf) format(ttf);
+  font-weight: 3=900;
+  font-display: auto;
+}

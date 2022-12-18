@@ -1,0 +1,11 @@
+.sub__nav {
+  display: flex;
+  margin: 50px auto;
+  justify-content: space-evenly;
+  background-color: rgb(105, 145, 182);
+}
+.sub__nav_button {
+  padding: 20px;
+  font-size: 30px;
+  color: white;
+}

@@ -43,7 +43,7 @@ function PlayForm({ encode }) {
             });
         }}
       >
-        <Form className="form" name="adventures" data-netlify="true">
+        <Form className="best-form" name="adventures" data-netlify="true">
           <input type="hidden" name="adventures" value="adventure" />
           <TextInput name="name">Name: </TextInput>
           <TextInput name="address">Address:</TextInput>
@@ -63,6 +63,7 @@ function PlayForm({ encode }) {
         formId="639110ea75aa5200085738f2"
         name="Adventure name:"
         money="Cost:"
+        click={clickCount}
       />
     </section>
   );

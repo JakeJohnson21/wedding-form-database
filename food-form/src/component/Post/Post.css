@@ -1,0 +1,81 @@
+.post {
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 30px;
+  margin: 18px;
+  height: 610px;
+  width: 300px;
+  background-color: black;
+}
+.post > #name {
+  grid-area: "name";
+}
+.post > #address {
+  grid-area: "adr";
+}
+.post > #url {
+  grid-area: "url";
+}
+.post > #description {
+  grid-area: "desc";
+}
+.post > #attire {
+  grid-area: "attire";
+}
+.post > #price {
+  grid-area: "price";
+}
+.post__name {
+  font-size: 20px;
+  margin: unset;
+}
+.post__url {
+}
+
+.post__sub {
+}
+
+.post-box {
+  text-align: center;
+  background-color: silver;
+  margin: 20px 0;
+  padding: 0px;
+  width: 100%;
+  border-radius: 10px;
+}
+.post__top {
+  height: 380px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.post__middle {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 120px;
+  margin-top: 40px;
+}
+
+.post__bottom {
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+  margin-bottom: 0;
+}
+.post__name {
+  font-size: 26px;
+  text-align: center;
+  margin: 30px auto;
+}
+.post__sub {
+  padding: 0 20px;
+}

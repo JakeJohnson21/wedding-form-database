@@ -1,17 +1,9 @@
-import audubonImage from "../../images/bordered-color-lighterDropShadow-Schlitz.png";
+import audubonImage from "../../images/walkway-b&w-bordered-Schlitz.png";
 
 function Home() {
   return (
-    <section className="homepage">
-      <div className="heading-title_wrap">
-        <h1 className="heading-title">Kyle</h1>
-        <div className="heading-sub-wrapper">
-          <img className="heading-image" src={audubonImage} alt="audubon"></img>
-          <h1 className="heading-date">07 14 2023</h1>
-        </div>
-
-        <h1 className="heading-title">Farial</h1>
-      </div>
+    <section className="page__content">
+      <img className="home__image" src={audubonImage} alt="audubon"></img>
     </section>
   );
 }
