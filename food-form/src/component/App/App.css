@@ -13,7 +13,7 @@
 }
 
 .page__content_wrapper {
-  /* border: 16px solid rgb(224, 224, 224); */
+  border: 8px solid rgb(221, 219, 212);
   box-shadow: inset 0px 0px 30px -5px rgb(22, 22, 22, 0.5);
   border-radius: 40px;
   background-color: rgb(158, 152, 139);
