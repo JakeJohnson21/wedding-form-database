@@ -14,8 +14,8 @@ body {
   height: 100vh;
 }
 * {
-  transition: all 0.2s 0s linear;
   font-family: "Lexend";
+  transition: all 0.2s 0s linear;
 }
 
 @import url(component/App/App.css);

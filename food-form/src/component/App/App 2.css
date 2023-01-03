@@ -38,8 +38,9 @@
 }
 
 .heading-title {
+  font-family: "Lexend";
   font-size: 110px;
-  font-weight: 300;
+  font-weight: 200;
   margin: 30px;
   color: #fcfcfc;
   position: relative;
