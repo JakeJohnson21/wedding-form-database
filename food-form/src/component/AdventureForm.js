@@ -61,13 +61,12 @@ function AdventureForm({ encode }) {
           </button>
         </Form>
       </Formik>
-      {/* <Api
+      <Api
         formId="63b621fa4d6401000901cab2"
         name="Adventure name:"
         money="Cost:"
-        optional=""
         click={clickCount}
-      /> */}
+      />
     </section>
   );
 }
