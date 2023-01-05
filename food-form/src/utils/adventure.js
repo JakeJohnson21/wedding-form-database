@@ -5,5 +5,5 @@ export const funSchema = yup.object().shape({
   address: yup.string().required(),
   url: yup.string().url("Must begin with http:// or https://").required(),
   description: yup.string(),
-  cost: yup.string().required(),
+  cost: yup.string(),
 });
