@@ -1,5 +1,5 @@
 import { Formik, Form } from "formik";
-import { hotelSchema } from "../utils/stay";
+import { funSchema } from "../utils/adventure";
 import Api from "./Api";
 import { useState } from "react";
 import TextAreaInput from "./TextAreaInput";
@@ -25,12 +25,12 @@ function AdventureForm({ encode }) {
           description: "",
           cost: "",
         }}
-        validationSchema={hotelSchema}
+        validationSchema={funSchema}
         onSubmit={(values, { resetForm, setSubmitting }) => {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "adventures", ...values }),
+            body: encode({ "form-name": "play", ...values }),
           })
             .then(() => {
               alert("success");
@@ -43,8 +43,8 @@ function AdventureForm({ encode }) {
             });
         }}
       >
-        <Form className="best-form" name="hotels" data-netlify="true">
-          <input type="hidden" name="hotels" value="hotel" />
+        <Form className="best-form" name="play" data-netlify="true">
+          <input type="hidden" name="play" value="play" />
           <TextInput name="name">Adventure name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
