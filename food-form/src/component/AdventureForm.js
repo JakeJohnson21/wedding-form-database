@@ -30,7 +30,7 @@ function AdventureForm({ encode }) {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "play", ...values }),
+            body: encode({ "form-name": "adventures", ...values }),
           })
             .then(() => {
               alert("success");

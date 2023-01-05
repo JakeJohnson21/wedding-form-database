@@ -45,7 +45,7 @@ function PlayForm({ encode }) {
         }}
       >
         <Form className="best-form" name="adventures" data-netlify="true">
-          <input type="hidden" name="adventures" value="adventure" />
+          <input type="hidden" name="adventures" value="adventures" />
           <TextInput name="name">Adventure name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
