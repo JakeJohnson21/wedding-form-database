@@ -48,8 +48,8 @@ function PlayForm({ encode }) {
           <TextInput name="name">Name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
-          <TextAreaInput name="description">Description</TextAreaInput>
-          <TextInput name="price">Cost?</TextInput>
+          <TextAreaInput name="description">Description:</TextAreaInput>
+          <TextInput name="price">Cost:</TextInput>
           <button
             type="submit"
             className="submit__button"

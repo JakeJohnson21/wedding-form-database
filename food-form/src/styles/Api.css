@@ -33,6 +33,9 @@
   font-weight: 600;
   font-size: 20px;
   margin-left: 0;
+  width: 100%;
+  text-align: left;
+  overflow-wrap: break-word;
 }
 
 .trash-icon {
