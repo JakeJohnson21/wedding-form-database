@@ -82,7 +82,6 @@ function Api({ formId, name, money, optional, click }) {
               } else if (optional === "Distance from venue:") {
                 return <p className="best-post-text">{item.data.distance}</p>;
               } else {
-                return;
               }
             })()}
           </label>

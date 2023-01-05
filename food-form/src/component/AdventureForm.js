@@ -1,14 +1,13 @@
 import { Formik, Form } from "formik";
-import { restaurantSchema } from "../../utils/food";
-import Api from "../Api";
+import { hotelSchema } from "../utils/stay";
+import Api from "./Api";
 import { useState } from "react";
-import TextAreaInput from "../TextAreaInput";
-import TextInput from "../TextInput";
+import TextAreaInput from "./TextAreaInput";
+import TextInput from "./TextInput";
 
-// restaurant form_id 638ff9b427bdc9000845d676
-// site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
+// hotel form_id 639110e975aa5200085738f1
 
-function FoodForm({ encode }) {
+function AdventureForm({ encode }) {
   const [clickCount, setClickCount] = useState(0);
 
   const handleClickCounter = () => {
@@ -24,15 +23,14 @@ function FoodForm({ encode }) {
           address: "",
           url: "",
           description: "",
-          price: "",
-          attire: "",
+          cost: "",
         }}
-        validationSchema={restaurantSchema}
+        validationSchema={hotelSchema}
         onSubmit={(values, { resetForm, setSubmitting }) => {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "restaurants", ...values }),
+            body: encode({ "form-name": "adventures", ...values }),
           })
             .then(() => {
               alert("success");
@@ -45,16 +43,15 @@ function FoodForm({ encode }) {
             });
         }}
       >
-        <Form className="best-form" name="restaurants" data-netlify="true">
-          <input type="hidden" name="restaurants" value="restaurant" />
-          <TextInput name="name">Restaurant name: </TextInput>
+        <Form className="best-form" name="hotels" data-netlify="true">
+          <input type="hidden" name="hotels" value="hotel" />
+          <TextInput name="name">Adventure name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
           <TextAreaInput name="description">
-            Restaurant description
+            Adventure description:
           </TextAreaInput>
-          <TextInput name="price">Price range</TextInput>
-          <TextInput name="attire">Attire</TextInput>
+          <TextInput name="price">Cost:</TextInput>
           <button
             type="submit"
             className="submit__button"
@@ -65,14 +62,14 @@ function FoodForm({ encode }) {
         </Form>
       </Formik>
       <Api
-        formId="638ff9b427bdc9000845d676"
-        name="Restaurant name:"
-        money="Price range:"
-        optional="Attire:"
+        formId=""
+        name="Adventure name:"
+        money="Cost:"
+        optional=""
         click={clickCount}
       />
     </section>
   );
 }
 
-export default FoodForm;
+export default AdventureForm;

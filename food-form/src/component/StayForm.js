@@ -49,9 +49,9 @@ function StayForm({ encode }) {
           <TextInput name="name">Hotel name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
-          <TextAreaInput name="description">Hotel description</TextAreaInput>
-          <TextInput name="price">Price range</TextInput>
-          <TextInput name="distance">Distance from venue</TextInput>
+          <TextAreaInput name="description">Hotel description:</TextAreaInput>
+          <TextInput name="price">Price range:</TextInput>
+          <TextInput name="distance">Distance from venue:</TextInput>
           <button
             type="submit"
             className="submit__button"

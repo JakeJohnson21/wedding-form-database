@@ -13,6 +13,9 @@ body {
 #root {
   height: 100vh;
 }
+button {
+  cursor: pointer;
+}
 * {
   font-family: "Lexend";
   transition: all 0.2s 0s linear;

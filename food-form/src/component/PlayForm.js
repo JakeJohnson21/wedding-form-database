@@ -6,6 +6,7 @@ import TextAreaInput from "./TextAreaInput";
 import TextInput from "./TextInput";
 
 // adventure form_id 639110ea75aa5200085738f2
+// site id b93b5d62-fdd1-4c48-ba6a-b6d26cfecc1
 
 function PlayForm({ encode }) {
   const [clickCount, setClickCount] = useState(0);
@@ -45,11 +46,11 @@ function PlayForm({ encode }) {
       >
         <Form className="best-form" name="adventures" data-netlify="true">
           <input type="hidden" name="adventures" value="adventure" />
-          <TextInput name="name">Name: </TextInput>
+          <TextInput name="name">Adventure name: </TextInput>
           <TextInput name="address">Address:</TextInput>
           <TextInput name="url">Website URL:</TextInput>
-          <TextAreaInput name="description">Description</TextAreaInput>
-          <TextInput name="price">Cost?</TextInput>
+          <TextAreaInput name="description">Description:</TextAreaInput>
+          <TextInput name="price">Cost:</TextInput>
           <button
             type="submit"
             className="submit__button"

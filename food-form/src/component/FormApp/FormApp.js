@@ -1,6 +1,7 @@
 import FoodForm from "../FoodForm/FoodForm";
 import PlayForm from "../PlayForm";
 import StayForm from "../StayForm";
+import AdventureForm from "../AdventureForm";
 
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -40,7 +41,7 @@ function FormApp() {
           <Route
             path="/play"
             name="play"
-            element={<PlayForm encode={encode} />}
+            element={<AdventureForm encode={encode} />}
           />
         </Routes>
 

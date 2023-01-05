@@ -25,7 +25,6 @@ function App() {
   useEffect(() => {
     setPage(location.pathname);
   }, [location]);
-  console.log(mobileMenuOpen);
 
   return (
     <main className="basepage">
