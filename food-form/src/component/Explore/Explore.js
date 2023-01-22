@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, Navigate } from "react-router-dom";
 
 import ExploreContent from "../ExploreContent/ExploreContent";
 
@@ -17,25 +17,28 @@ function Explore({ eat, stay, play }) {
           <button className="sub__nav_button">Adventure</button>
         </Link>
       </nav>
-      <Routes>
-        <Route
-          path="/explore/eat"
-          name="eat"
-          element={<ExploreContent item={eat} />}
-        />
+      <section className="explore__pages">
+        <Routes>
+          <Route
+            path="/eat"
+            name="eat"
+            element={<ExploreContent items={eat} />}
+          />
 
-        <Route
-          path="/explore/stay"
-          name="stay"
-          element={<ExploreContent item={stay} />}
-        />
+          <Route
+            path="/stay"
+            name="stay"
+            element={<ExploreContent items={stay} />}
+          />
 
-        <Route
-          path="/explore/adventure"
-          name="play"
-          element={<ExploreContent item={play} />}
-        />
-      </Routes>
+          <Route
+            path="/adventure"
+            name="play"
+            element={<ExploreContent items={play} />}
+          />
+          {/* <Route path="*" element={<Navigate to="/eat" replace />} /> */}
+        </Routes>
+      </section>
     </section>
   );
 }

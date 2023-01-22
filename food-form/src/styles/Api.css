@@ -1,13 +1,15 @@
 .best-post {
-  padding: 40px;
-  margin: 20px;
+  padding: 60px 20px 30px;
+  margin: 10px;
   z-index: 2;
-  width: 300px;
+  width: 240px;
   display: flex;
   flex-direction: column;
   border: 3px solid white;
   border-radius: 20px;
   position: relative;
+  overflow-wrap: break-word;
+  justify-content: space-around;
 }
 
 .best-post__wrapper {
@@ -16,26 +18,28 @@
   flex-flow: row wrap;
   margin: auto;
   z-index: 2;
-  width: 90vw;
+  width: 96vw;
   margin: 100px auto;
 }
 .best-post-label {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   color: rgb(31, 46, 80);
   margin: 0 0 14px;
   padding: 0;
+  overflow-wrap: break-word;
 }
 .best-post-text {
   color: white;
-  font-weight: 600;
-  font-size: 20px;
+  font-weight: 400;
+  font-size: 12px;
   margin-left: 0;
+  word-break: break-all;
 }
 
 .trash-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 15px;
   right: 20px;

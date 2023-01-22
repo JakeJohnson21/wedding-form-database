@@ -1,0 +1,31 @@
+.title {
+  margin: auto;
+
+  font-size: 50px;
+  font-weight: 300;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.other__title {
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+.homepage__title {
+  margin-top: 80px;
+  font-size: 90px;
+}
+
+.home__image {
+  max-width: 1000px;
+  width: 96%;
+  object-fit: contain;
+  max-height: 60vmin;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  background-color: transparent;
+}

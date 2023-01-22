@@ -15,9 +15,79 @@ import Footer from "../Footer/Footer";
 function App() {
   const [page, setPage] = useState("");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [restaurantList, setRestaurantList] = useState([]);
+  const [hotelList, setHotelList] = useState([]);
+  const [adventureList, setAdventureList] = useState([]);
+
+  //-----------------------------------------------------------------------------
+
+  function handleRestaurantList() {
+    const populateData = async () => {
+      const get = await fetch(
+        `https://api.netlify.com/api/v1/forms/638ff9b427bdc9000845d676/submissions`,
+        {
+          headers: {
+            Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const response = await get.json();
+      setRestaurantList(response);
+    };
+    populateData();
+  }
+  //-----------------------------------------------------------------------------
+  function handleHotelList() {
+    const populateData = async () => {
+      const get = await fetch(
+        `https://api.netlify.com/api/v1/forms/639110e975aa5200085738f1/submissions`,
+        {
+          headers: {
+            Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const response = await get.json();
+      setHotelList(response);
+    };
+    populateData();
+  }
+  //-----------------------------------------------------------------------------
+  function handleAdventureList() {
+    const populateData = async () => {
+      const get = await fetch(
+        `https://api.netlify.com/api/v1/forms/639110ea75aa5200085738f2/submissions`,
+        {
+          headers: {
+            Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const response = await get.json();
+      setAdventureList(response);
+    };
+    populateData();
+  }
+  //-----------------------------------------------------------------------------
+
+  useEffect(() => {
+    handleRestaurantList();
+    handleHotelList();
+    handleAdventureList();
+  }, []);
+
+  console.log("food", restaurantList);
+
+  //-----------------------------------------------------------------------------
 
   function handleMobileMenuOpen() {
     setMobileMenuOpen(!mobileMenuOpen);
+  }
+  function handleCloseMobileMenu() {
+    setMobileMenuOpen(false);
   }
 
   const location = useLocation();
@@ -25,38 +95,47 @@ function App() {
   useEffect(() => {
     setPage(location.pathname);
   }, [location]);
+  //-----------------------------------------------------------------------------
 
+  const titleClassName = `title ${
+    page === "/" ? "homepage__title" : "other__title"
+  }`;
+
+  console.log(page);
   return (
     <main className="basepage">
+      <h1 className={titleClassName}>Farial & Kyle</h1>
       <Nav page={page} />
-      <MobileMenu isOpen={mobileMenuOpen} />
+
       <div className="page__parent_wrapper">
-        <h1 className="heading-title">Kyle</h1>
-        <div className="page__content_wrapper">
-          <section className="page__content">
-            <Routes>
-              <Route path="/" name="home" element={<Home page={page} />} />
-              <Route
-                path="/our-story"
-                name="our-story"
-                element={<OurStory />}
-              />
-              <Route path="/answers" name="answers" element={<Answers />} />
-              <Route
-                path="/explore"
-                name="explore"
-                element={<Explore eat={""} play={""} stay={""} />}
-              />
-              <Route path="/registry" name="registry" element={<Registry />} />
-              <Route path="/rsvp" name="rsvp" element={<Rsvp />} />
-              <Route path="/jakeisthebestform/*" element={<FormApp />} />
-            </Routes>
-            <h1 className="heading-date">July 14th 2023</h1>
-          </section>
-        </div>
-        <h1 className="heading-title">Farial</h1>
+        {/* <h1 className="heading-title">Kyle</h1> */}
+        <section className="page__content">
+          <Routes>
+            <Route path="/" name="home" element={<Home page={page} />} />
+            <Route path="/our-story" name="our-story" element={<OurStory />} />
+            <Route path="/answers" name="answers" element={<Answers />} />
+            <Route
+              path="/explore/*"
+              name="explore"
+              element={
+                <Explore
+                  eat={restaurantList}
+                  stay={hotelList}
+                  play={adventureList}
+                />
+              }
+            />
+            <Route path="/registry" name="registry" element={<Registry />} />
+            <Route path="/rsvp" name="rsvp" element={<Rsvp />} />
+            <Route path="/jakeisthebestform/*" element={<FormApp />} />
+          </Routes>
+        </section>
+
+        {/* <h1 className="heading-title">Farial</h1> */}
       </div>
-      {/* <Footer /> */}
+      <Footer />
+      <MobileMenu isOpen={mobileMenuOpen} onClose={handleCloseMobileMenu} />
+
       <button
         className="mobile__menu_button"
         onClick={handleMobileMenuOpen}

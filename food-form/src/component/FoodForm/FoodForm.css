@@ -7,7 +7,7 @@
 }
 .form__label {
   margin: 16px;
-  font-size: 18px;
+  font-size: 1em;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -22,7 +22,7 @@
   border: none;
   width: 90%;
   margin-top: 8px;
-  font-size: 22px;
+  font-size: 1em;
   padding: 10px;
 }
 .form__input:focus {

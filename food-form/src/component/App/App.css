@@ -1,10 +1,9 @@
 .basepage {
   position: relative;
-  min-height: 100vh;
 }
+
 .page__parent_wrapper {
   position: relative;
-  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,30 +11,17 @@
   margin-bottom: 20px;
 }
 
-.page__content_wrapper {
+/* .page__content_wrapper {
   border: 8px solid rgb(221, 219, 212);
   box-shadow: inset 0px 0px 30px -5px rgb(22, 22, 22, 0.5);
   border-radius: 40px;
   background-color: rgb(158, 152, 139);
   padding: 50px 10px 30px;
-  width: 80vw;
-  height: calc(80vmin - 160px);
+  width: 95vw;
+  height: 100vh;
   position: relative;
   text-align: center;
-  left: 1.2vmin;
-  margin-right: 20px;
-}
-.home__image {
-  max-width: 1000px;
-  width: 96%;
-  object-fit: contain;
-  max-height: 60vmin;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  position: relative;
-  background-color: transparent;
-}
+} */
 
 .heading-title {
   font-size: 110px;
@@ -62,16 +48,6 @@
 .mobile__menu_button {
   display: none;
 }
-@media screen and (max-width: 1450px) {
-  /* .heading-title {
-    font-size: 6vmin;
-  } */
-}
-@media screen and (max-width: 1280px) {
-  .page__content_wrapper {
-    border: 14px solid white;
-  }
-}
 @media screen and (max-width: 1020px) {
   .heading-title {
     margin: 20px;
@@ -91,9 +67,9 @@
   }
 }
 
-@media screen and (max-width: 640px) {
-  .page__parent_wrapper {
-    height: 100vh;
+@media screen and (max-width: 840px) {
+  .basepage {
+    margin-top: 70px;
   }
   .mobile__menu_button {
     display: block;
@@ -103,7 +79,7 @@
     background-repeat: no-repeat;
     background-color: transparent;
     border: none;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 10px;
     z-index: 2;

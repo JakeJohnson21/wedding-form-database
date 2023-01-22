@@ -1,18 +1,19 @@
 import React from "react";
 import Post from "../Post/Post";
 
-function ExploreContent({ item }) {
+function ExploreContent({ items }) {
+  console.log("items = ", items);
   return (
     <section className="sub-main">
-      {item.map((item, index) => (
+      {items.map((item) => (
         <Post
-          key={index}
-          name={item.name}
-          address={item.address}
-          description={item.description}
-          url={item.url}
-          price={item.price}
-          attire={item.attire}
+          key={item.data.id}
+          name={item.data.name}
+          address={item.data.address}
+          description={item.data.description}
+          url={item.data.url}
+          price={item.data.price}
+          attire={item.data.attire}
         />
       ))}
     </section>
