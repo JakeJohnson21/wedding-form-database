@@ -7,7 +7,7 @@ function Explore({ eat, stay, play }) {
   return (
     <section className="page__content">
       <nav className="sub__nav">
-        <Link className="sub__link" to="/explore/eat">
+        <Link className="sub__link" to="/explore/">
           <button className="sub__nav_button">Eat</button>
         </Link>
         <Link className="sub__link" to="/explore/stay">
@@ -19,11 +19,7 @@ function Explore({ eat, stay, play }) {
       </nav>
       <section className="explore__pages">
         <Routes>
-          <Route
-            path="/eat"
-            name="eat"
-            element={<ExploreContent items={eat} />}
-          />
+          <Route path="/" name="eat" element={<ExploreContent items={eat} />} />
 
           <Route
             path="/stay"

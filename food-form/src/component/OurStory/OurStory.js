@@ -3,6 +3,8 @@ import React from "react";
 function OurStory() {
   return (
     <section className="main">
+      <h2 className="our-story__heading">Our Story (or page title)</h2>
+      <hr className="heading__divider"></hr>
       <p className="our-story__text">
         Sunt sit deserunt eiusmod officia in ullamco deserunt occaecat. Id
         proident velit aute aute mollit exercitation et Lorem sunt consequat in

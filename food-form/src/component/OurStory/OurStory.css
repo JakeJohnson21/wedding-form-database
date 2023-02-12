@@ -1,3 +1,16 @@
 .our-story__text {
   margin-left: 200px;
+  max-width: 1200px;
+  width: 60vw;
+  padding: 30px;
+  font-size: large;
+  margin: 30px auto;
+  color: white;
+  font-weight: 400;
+}
+.our-story__heading {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-weight: 500;
 }

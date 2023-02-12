@@ -6,9 +6,11 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 40px;
   margin-bottom: 20px;
+  min-height: 80vh;
+  width: 100vw;
 }
 
 /* .page__content_wrapper {
@@ -30,6 +32,12 @@
   color: #fcfcfc;
   position: relative;
   bottom: 50px;
+}
+.heading__divider {
+  height: 2px;
+  width: 36%;
+  margin: 20px auto;
+  background-color: white;
 }
 
 .heading-date {
@@ -84,9 +92,7 @@
     left: 10px;
     z-index: 2;
   }
-  .home__image {
-    max-width: 92vw;
-  }
+
   .heading-title {
     bottom: 0;
   }

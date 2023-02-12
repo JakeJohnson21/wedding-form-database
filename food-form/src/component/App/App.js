@@ -100,11 +100,21 @@ function App() {
   const titleClassName = `title ${
     page === "/" ? "homepage__title" : "other__title"
   }`;
+  const dateClassName = `date ${
+    page === "/" ? "homepage__date" : "other__date"
+  }`;
+  const pageHeadingClassName = `page__heading ${
+    page === "/" ? "homepage__heading" : "other__heading"
+  }`;
 
   console.log(page);
   return (
     <main className="basepage">
-      <h1 className={titleClassName}>Farial & Kyle</h1>
+      <div className={pageHeadingClassName}>
+        <h1 className={titleClassName}>Farial & Kyle</h1>
+        <h1 className={dateClassName}>07 14 2023</h1>
+      </div>
+
       <Nav page={page} />
 
       <div className="page__parent_wrapper">

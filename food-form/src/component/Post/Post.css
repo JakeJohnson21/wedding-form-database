@@ -23,6 +23,10 @@
   text-align: left;
   overflow: hidden;
 }
+.accordion-item__button_closed:hover {
+  background-color: rgb(243, 235, 235, 0.2);
+  border-radius: 20px;
+}
 .accordion-item__button_open {
   box-shadow: inset 0px 8px 20px 1px rgb(15, 15, 15, 0.6);
   background-color: rgb(51, 51, 51);
@@ -33,10 +37,11 @@
   border-top-right-radius: 20px;
   z-index: 2;
 }
-.accordion-item__button_closed {
-  background-color: rgb(166, 155, 148);
 
+.accordion-item__button_closed {
   color: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .accordion-item__data {
   box-shadow: inset 0px -10px 20px 2px rgb(15, 15, 15, 0.65);

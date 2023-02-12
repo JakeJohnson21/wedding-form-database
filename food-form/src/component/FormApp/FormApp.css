@@ -36,7 +36,7 @@ p {
   display: flex;
   justify-content: space-around;
 }
-.nav__button {
+.back-nav__button {
   font-size: 30px;
   padding: 20px;
   font-family: "roboto";
@@ -47,11 +47,11 @@ p {
   border: none;
   border-bottom: 4px solid transparent;
 }
-.nav__button:hover {
+.back-nav__button:hover {
   border-bottom: 4px solid rgb(205, 205, 205);
   color: white;
 }
-.nav__button:focus {
+.back-nav__button:focus {
   font-weight: 700;
   color: white;
 }

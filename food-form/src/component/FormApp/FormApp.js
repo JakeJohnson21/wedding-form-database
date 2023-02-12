@@ -17,13 +17,13 @@ function FormApp() {
       <div className="app">
         <nav className="nav">
           <Link to="/jakeisthebestform/food" className="nav__link">
-            <button className="nav__button">Restaurant</button>
+            <button className="back-nav__button">Restaurant</button>
           </Link>
           <Link to="/jakeisthebestform/stay" className="nav__link">
-            <button className="nav__button">Hotel</button>
+            <button className="back-nav__button">Hotel</button>
           </Link>
           <Link to="/jakeisthebestform/play" className="nav__link">
-            <button className="nav__button">Explore</button>
+            <button className="back-nav__button">Explore</button>
           </Link>
         </nav>
         <Routes>

@@ -10,6 +10,7 @@
   background-color: transparent;
   border: none;
   color: white;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 /* .explore__pages {
@@ -22,6 +23,6 @@
   flex-direction: column;
   margin: auto;
   justify-content: center;
-  width: 90vw;
+  width: 80vw;
   align-items: center;
 }

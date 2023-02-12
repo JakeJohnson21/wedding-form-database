@@ -1,26 +1,62 @@
 import { Link } from "react-router-dom";
-import React from "react";
-function Nav() {
+import React, { useState } from "react";
+function Nav({ page }) {
   return (
     <div className="nav__wrapper">
       <span className={"nav__button-wrapper_home"}>
         <Link className="nav__link" to="/">
-          <button className={"nav__button"}>Home</button>
+          <button
+            className={`nav__button ${
+              page === "/" ? "nav__button_active" : ""
+            }`}
+          >
+            Home
+          </button>
         </Link>
         <Link className="nav__link" to="/explore">
-          <button className={"nav__button"}>Explore</button>
+          <button
+            className={`nav__button ${
+              page === "/explore" ? "nav__button_active" : ""
+            }`}
+          >
+            Explore
+          </button>
         </Link>
         <Link className="nav__link" to="/answers">
-          <button className={"nav__button"}>Answers</button>
+          <button
+            className={`nav__button ${
+              page === "/answers" ? "nav__button_active" : ""
+            }`}
+          >
+            Answers
+          </button>
         </Link>
         <Link className="nav__link" to="/our-story">
-          <button className={"nav__button"}>Our Story</button>
+          <button
+            className={`nav__button ${
+              page === "/our-story" ? "nav__button_active" : ""
+            }`}
+          >
+            Our Story
+          </button>
         </Link>
         <Link className="nav__link" to="rsvp">
-          <button className={"nav__button"}>RSVP</button>
+          <button
+            className={`nav__button ${
+              page === "/rsvp" ? "nav__button_active" : ""
+            }`}
+          >
+            RSVP
+          </button>
         </Link>
         <Link className="nav__link" to="/registry">
-          <button className={"nav__button"}>Registry</button>
+          <button
+            className={`nav__button ${
+              page === "/registry" ? "nav__button_active" : ""
+            }`}
+          >
+            Registry
+          </button>
         </Link>
       </span>
     </div>
