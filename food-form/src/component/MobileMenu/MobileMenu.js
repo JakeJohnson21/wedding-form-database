@@ -20,12 +20,7 @@ function MobileMenu({ isOpen, onClose }) {
         </Link>
         <Link className="mobile__nav_link" to="/answers">
           <button className="mobile__nav_button" onClick={onClose}>
-            Answers
-          </button>
-        </Link>
-        <Link className="mobile__nav_link" to="/our-story">
-          <button className="mobile__nav_button" onClick={onClose}>
-            Our Story
+            Q&A
           </button>
         </Link>
         <Link className="mobile__nav_link" to="rsvp">

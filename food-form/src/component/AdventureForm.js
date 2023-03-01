@@ -65,6 +65,7 @@ function AdventureForm({ encode }) {
         formId="63b621fa4d6401000901cab2"
         name="Adventure name:"
         money="Cost:"
+        optional=""
         click={clickCount}
       />
     </section>

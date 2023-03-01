@@ -1,14 +1,13 @@
 import Home from "../Home/Home";
 import Nav from "../Nav/Nav";
 import Explore from "../Explore/Explore";
-import OurStory from "../OurStory/OurStory";
 import Answers from "../Answers/Answers";
 import Registry from "../Registry/Registry";
 import Rsvp from "../RVSP/Rsvp";
 import FormApp from "../FormApp/FormApp";
 
 import { Routes, Route, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Footer from "../Footer/Footer";
 
@@ -18,6 +17,46 @@ function App() {
   const [restaurantList, setRestaurantList] = useState([]);
   const [hotelList, setHotelList] = useState([]);
   const [adventureList, setAdventureList] = useState([]);
+  const [days, setDays] = useState();
+  const [hours, setHours] = useState();
+  const [minutes, setMinutes] = useState();
+  const [seconds, setSeconds] = useState();
+
+  //-----------------------------------------------------------------------------
+
+  let interval;
+
+  const startTimer = () => {
+    const countDownDate = new Date("July 14, 2023").getTime();
+
+    interval = setInterval(() => {
+      const now = new Date().getTime();
+
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (24 * 60 * 60 * 1000));
+      const hours = Math.floor(
+        (distance % (24 * 60 * 60 * 1000)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (60 * 60 * 1000)) / (60 * 1000));
+      const seconds = Math.floor((distance % (60 * 1000)) / 1000);
+
+      if (distance < 0) {
+        // Stop Timer
+
+        clearInterval(interval.current);
+      } else {
+        // Update Timer
+        setDays(days);
+        setHours(hours);
+        setMinutes(minutes);
+        setSeconds(seconds);
+      }
+    });
+  };
+  useMemo(() => {
+    startTimer();
+  }, []);
 
   //-----------------------------------------------------------------------------
 
@@ -79,8 +118,6 @@ function App() {
     handleAdventureList();
   }, []);
 
-  console.log("food", restaurantList);
-
   //-----------------------------------------------------------------------------
 
   function handleMobileMenuOpen() {
@@ -107,12 +144,12 @@ function App() {
     page === "/" ? "homepage__heading" : "other__heading"
   }`;
 
-  console.log(page);
   return (
     <main className="basepage">
       <div className={pageHeadingClassName}>
-        <h1 className={titleClassName}>Farial & Kyle</h1>
-        <h1 className={dateClassName}>07 14 2023</h1>
+        <h1 className={titleClassName}>Kyle & Farial</h1>
+
+        <h1 className={dateClassName}>July 14, 2023</h1>
       </div>
 
       <Nav page={page} />
@@ -122,7 +159,6 @@ function App() {
         <section className="page__content">
           <Routes>
             <Route path="/" name="home" element={<Home page={page} />} />
-            <Route path="/our-story" name="our-story" element={<OurStory />} />
             <Route path="/answers" name="answers" element={<Answers />} />
             <Route
               path="/explore/*"
@@ -132,6 +168,7 @@ function App() {
                   eat={restaurantList}
                   stay={hotelList}
                   play={adventureList}
+                  page={page}
                 />
               }
             />
@@ -143,7 +180,7 @@ function App() {
 
         {/* <h1 className="heading-title">Farial</h1> */}
       </div>
-      <Footer />
+      <Footer days={days} hours={hours} minutes={minutes} seconds={seconds} />
       <MobileMenu isOpen={mobileMenuOpen} onClose={handleCloseMobileMenu} />
 
       <button

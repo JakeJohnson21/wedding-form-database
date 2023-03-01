@@ -1,7 +1,7 @@
 import React from "react";
 import Post from "../Post/Post";
 
-function ExploreContent({ items }) {
+function AdventureContent({ items }) {
   return (
     <section className="sub-main">
       {items.map((item) => (

@@ -5,5 +5,5 @@ export const funSchema = yup.object().shape({
   address: yup.string().required(),
   url: yup.string().url().required(),
   description: yup.string(),
-  cost: yup.string(),
+  price: yup.string(),
 });

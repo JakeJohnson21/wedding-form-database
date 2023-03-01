@@ -50,7 +50,7 @@ function Post({ name, address, url, description, price, attire }) {
               <p className="text-header description-text-header">
                 Our Thoughts,
               </p>
-              <p className=" post__sub" id="description">
+              <p className="post__sub" id="description">
                 {description}
               </p>
             </div>
@@ -63,7 +63,7 @@ function Post({ name, address, url, description, price, attire }) {
             </div>
 
             <div className="detail-wrapper attire">
-              <p className="text-header">Attire</p>
+              <p className="text-header">Attire: </p>
               <p className="post__sub" id="attire">
                 {attire}
               </p>

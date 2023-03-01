@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 function Nav({ page }) {
   return (
     <div className="nav__wrapper">
@@ -28,16 +28,7 @@ function Nav({ page }) {
               page === "/answers" ? "nav__button_active" : ""
             }`}
           >
-            Answers
-          </button>
-        </Link>
-        <Link className="nav__link" to="/our-story">
-          <button
-            className={`nav__button ${
-              page === "/our-story" ? "nav__button_active" : ""
-            }`}
-          >
-            Our Story
+            Q&A
           </button>
         </Link>
         <Link className="nav__link" to="rsvp">

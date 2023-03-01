@@ -1,0 +1,98 @@
+.rsvp__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85vw;
+  border-radius: 100px;
+  padding: 50px;
+
+  margin: auto;
+}
+.page__title {
+  font-size: 60px;
+  margin: 40px auto;
+}
+
+.rsvp__caption {
+  font-weight: 400;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rsvp-form__label {
+  font-size: 20px;
+}
+
+.rsvp-form__input {
+  width: 80vw;
+  max-width: 800px;
+  background-color: rgba(53, 51, 51, 0.52);
+  box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.737);
+  border: none;
+  box-sizing: border-box;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-size: 24px;
+  font-weight: 300;
+  margin-top: 10px;
+  text-align: center;
+}
+.rsvp-form__error {
+  margin-top: 20px;
+  font-weight: 600;
+  color: rgb(60, 100, 201);
+}
+.rsvp__text-area {
+  height: 150px;
+  padding: 20px;
+}
+.rsvp__text-area::-webkit-scrollbar {
+  display: none;
+}
+.rsvp__radio-group {
+  margin: 30px auto 60px;
+}
+
+.radio-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 18px;
+  align-items: center;
+}
+.radio-field {
+  margin-right: 20px;
+  width: 4em;
+  position: relative;
+  height: 1.6em;
+  margin-left: 10px;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+.radio__roman {
+  align-self: flex-start;
+  margin: 0;
+}
+.radio__text {
+  margin: 0;
+  font-weight: 400;
+  margin-left: 3%;
+  font-size: larger;
+}
+.rsvp__submit-button {
+  background-color: transparent;
+  border-radius: 15px;
+  padding: 13px 30px;
+  font-size: 1.3em;
+  border: none;
+}
+.rsvp__submit-button:hover {
+  background-color: rgba(0, 0, 0, 0.293);
+}
+
+@media screen and (max-width: 840px) {
+}

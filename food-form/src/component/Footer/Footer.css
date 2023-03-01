@@ -3,10 +3,11 @@
   height: 200px;
   display: flex;
   background-color: rgb(47, 47, 47, 0.7);
-  align-items: flex-end;
+  align-items: center;
   bottom: 0;
   left: 0;
   right: 0;
+  justify-content: center;
 }
 .footer__date {
   color: white;

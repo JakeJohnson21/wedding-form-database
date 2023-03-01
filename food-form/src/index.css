@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: rgb(166, 155, 148);
+  background-color: rgb(85, 172, 156);
   height: 100vh;
   min-height: 100%;
 }
@@ -10,8 +10,9 @@ button {
 }
 * {
   font-family: "Heebo";
-  letter-spacing: 0.12ch;
+  letter-spacing: 0.08ch;
   transition: all 0.2s 0s linear;
+  color: white;
 }
 
 @import url(component/App/App.css);
@@ -21,16 +22,17 @@ button {
 @import url(styles/Api.css);
 
 @import url(component/Home/Home.css);
+@import url(component/Answers/Answers.css);
 @import url(component/Explore/Explore.css);
 @import url(component/ExploreContent/ExploreContent.css);
 @import url(component/Nav/Nav.css);
 @import url(component/MobileMenu/MobileMenu.css);
-@import url(component/OurStory/OurStory.css);
 @import url(component/Post/Post.css);
 @import url(component/Post/MobilePost.css);
 @import url(component/Registry/Registry.css);
 @import url(component/RVSP/Rsvp.css);
 @import url(component/Footer/Footer.css);
+@import url(component/Countdown/Countdown.css);
 
 @import url(fonts/inter.css);
 @import url(fonts/fonts.css);

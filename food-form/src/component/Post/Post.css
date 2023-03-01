@@ -108,6 +108,9 @@
   text-align: center;
   margin: auto;
 }
+#attire {
+  margin-left: 10px;
+}
 .post__name {
   margin-right: 20px;
 }
@@ -159,7 +162,6 @@
   flex-direction: row;
 }
 .description-text-header {
-  margin-left: 10%;
 }
 .description {
   margin-top: 20px;
