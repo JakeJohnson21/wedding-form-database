@@ -33,7 +33,7 @@ function Rsvp({ encode }) {
         }}
       >
         <Form className="rsvp-form" name="rsvp" data-netlify="true">
-          <input type="hidden" name="rsvp" value="rsvp-value" />
+          <input type="hidden" name="rsvp" value="rsvp" />
           <TextInput name="name">Full name:</TextInput>
           <div className="rsvp__radio-group">
             <h2 className="radio-group__heading">Select your entree</h2>
