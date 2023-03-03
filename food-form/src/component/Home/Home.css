@@ -55,10 +55,30 @@
   background-size: contain;
   box-sizing: border-box;
   position: relative;
-  max-width: 95vw;
+  width: 80vw;
+  max-width: 1000px;
   background-color: transparent;
   border: 30px solid rgb(46, 46, 46, 0.7);
 }
+
+@media screen and (min-width: 800px) {
+  .home__image-desktop {
+    display: block;
+    margin-top: 50px;
+  }
+  .home__image-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 799px) {
+  .home__image-desktop {
+    display: none;
+  }
+  .home__image-mobile {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 2000px) {
   .other__date,
   .other__title {
@@ -75,8 +95,8 @@
 
 @media screen and (max-width: 840px) {
   .home__image {
-    max-width: 92vw;
-    border: 20px solid rgb(46, 46, 46, 0.7);
+    width: 85vw;
+    border: 16px solid rgb(46, 46, 46, 0.7);
   }
   .page__heading {
     flex-direction: column;
@@ -99,7 +119,7 @@
     font-size: 50px;
   }
   .homepage__heading {
-    margin: 50px auto;
+    margin: 50px auto 25px;
   }
   .other__heading {
     border-bottom: 6px dotted rgba(255, 255, 255, 0.683);

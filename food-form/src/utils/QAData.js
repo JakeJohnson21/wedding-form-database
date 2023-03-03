@@ -28,7 +28,47 @@ const data = [
   },
   {
     q: "Have you reserved blocks of rooms at one or more hotels?",
-    a: "-	We have only a few hotel rooms in Grafton (5-10 minutes from the venue) and a few friends in the area that are willing to host guests. If you need help with lodging, please reach out directly to us.",
+    a: "We have only a few hotel rooms in Grafton (5-10 minutes from the venue) and a few friends in the area that are willing to host guests. If you need help with lodging, please reach out directly to us.",
+  },
+  {
+    q: "Wedding dress code",
+    a: "Black Tie Optional Attire. You can decide to wear something more formal and go all out and we are just as happy to have you in your shorts, sandals, and fedora.",
+    aa: "We do encourage those that wish to, to wear traditional Indian/Pakistani attire. Farial and a few of her family members/friends and the ladies in Kyle’s family will all have traditional Indian/Pakistani attire.",
+    aaa: "We also suggest bringing sneakers/comfortable shoes to walk the trails at the venue. Parking is literally right next to the area where the ceremony will be, you will be able to go back and forth to your car if you need to.",
+  },
+  {
+    q: "Am I allowed to bring a plus 1?",
+    a: "Unfortunately, if we have not written plus 1 on your invitation card, we wish that you come by yourself. If you feel we have overlooked something, please reach out. We will plan our table arrangement well and you will definitely know someone at your table or be in a group you will feel excited to get to know. Our friends and family are pretty awesome.",
+  },
+  {
+    q: "Am I allowed to bring my kids?",
+    a: "Guests from abroad and immediate family – Absolutely. Our guests travelling in from aboard, who is going to watch your kids in your home country?? That sounds a bit difficult, and we want you to be able to come and enjoy the time you are able to here.",
+    aa: "In general for the rest of the guests – we are assuming that you could use a night off. We hope you understand and are able to make arrangements.",
+  },
+  {
+    q: "Will there be an open bar?",
+    a: "Yes, there will be an open bar from 5:30 PM to 10:30 PM offering wine and beer.",
+    a: "We will also have some delicious mocktails and various sodas for those that are looking for a non-alcoholic refreshment.",
+  },
+  {
+    q: "Wedding gifts",
+  },
+  {
+    q: "What time should I arrive at the reception?",
+    a: "Our wedding reception is located at a beautiful nature reserve center. We recommend arriving at least 30 min before the ceremony, as it will start promptly at 5:00 PM. ",
+    aa: "If you would like to explore the area, there will be maps available for the guests. There are some beautiful areas with water ponds to take pictures and make memories, which we highly recommend but be aware of the time if you decide to explore before the reception. Also, we do recommend bringing sneakers if you decide to explore the park and leave them in your car after you are done exploring.",
+  },
+  {
+    q: "Am I allowed to take photos during the Ceremony?",
+    a: "There will be a photographer during the ceremony. We request everyone to keep their phone in their pockets or purse during the ceremony and that they are on vibrate/silent. We will share them with you on our website once they are available. Thank you for understanding.",
+  },
+  {
+    q: "Can I post wedding pictures on social media?",
+    a: "Please do and share them with us as well.",
+  },
+  {
+    q: "I have more questions about your wedding, who can I contact?",
+    a: "Kyle Bareither (kbareither@gmail.com) or Farial Batul (faba@bu.edu)",
   },
 ];
 

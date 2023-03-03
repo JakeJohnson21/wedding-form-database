@@ -1,20 +1,21 @@
 .sub__nav {
-  background-color: rgba(0, 0, 0, 0.483);
+  background-color: rgba(41, 33, 127, 0.483);
   padding: 5px 50px;
-  border-radius: 15px;
+  border-radius: 25px;
   display: flex;
   margin: 20px auto 50px;
   justify-content: space-between;
   max-width: 700px;
+  box-shadow: inset 0px 4px 8px 3px rgb(35, 34, 34, 0.5);
 }
 .sub__nav_button {
-  padding: 10px;
-  font-size: 30px;
+  padding: 6px;
+  font-size: 20px;
   background-color: transparent;
   border: none;
   color: white;
-  font-weight: 600;
-  margin-bottom: 10px;
+  font-weight: 300;
+  margin-bottom: 8px;
 }
 /* .explore__pages {
   display: flex;
@@ -57,17 +58,39 @@
   .sub__nav {
     padding: 5px 0px;
     background-color: transparent;
-    justify-content: space-arounds;
+    justify-content: space-around;
+    width: 80vw;
   }
   .sub__nav_button {
     font-size: 20px;
     background-color: rgba(0, 0, 0, 0.617);
     border-radius: 10px;
     margin: auto;
+    width: 150px;
     border-bottom: unset;
     box-shadow: inset 0px 4px 8px 3px rgb(35, 34, 34, 0.5);
   }
   .sub__nav_button_active {
     background-color: rgb(14, 14, 14);
   }
-} ;
+}
+
+@media screen and (max-width: 600px) {
+  .sub__nav {
+    width: 96vw;
+  }
+  .sub__nav_button {
+    width: 125px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub__nav {
+    width: 96vw;
+  }
+  .sub__nav_button {
+    width: 100px;
+    font-size: 1em;
+  }
+}

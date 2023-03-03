@@ -112,10 +112,10 @@
   margin-left: 10px;
 }
 .post__name {
+  margin: 0;
   margin-right: 20px;
 }
 .post__price {
-  font-size: 1.6em;
   padding: 10px;
   width: 60px;
   margin-right: 20px;
@@ -124,14 +124,12 @@
 .post__url {
   color: rgba(255, 255, 255, 0.851);
   font-weight: 500;
-  font-size: 1.2em;
   text-decoration: none;
   margin-bottom: 18px;
 }
 .text-header {
-  font-size: 1.2em;
   font-weight: 500;
-  color: rgb(219, 203, 165);
+  color: rgb(165, 194, 219);
 }
 .detail-wrapper {
   margin-top: 20px;
@@ -165,10 +163,24 @@
 }
 .description {
   margin-top: 20px;
-  font-size: 1.15em;
   flex-direction: column;
   align-items: flex-start;
 }
 .address {
   justify-content: center;
+}
+
+@media screen and (max-width: 540px) {
+  .post {
+    font-size: 14px;
+  }
+  .post__name {
+    font-size: 1em;
+    margin: 10px 5px;
+  }
+  .post__price {
+    font-size: 1em;
+  }
+  .accordion-item__button {
+  }
 }

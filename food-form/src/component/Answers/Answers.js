@@ -11,7 +11,8 @@ function Answers() {
           key={item}
           question={item.q}
           answer={item.a}
-          answerTwo={item.da}
+          answerTwo={item.aa}
+          answerThree={item.aaa}
           address={item.address}
           link={item.link}
         />
