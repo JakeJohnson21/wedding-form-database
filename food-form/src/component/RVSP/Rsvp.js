@@ -22,8 +22,8 @@ function Rsvp({ encode }) {
           })
             .then(() => {
               alert("Success. Thank you!");
-              setSubmitting(false);
-              resetForm();
+              // setSubmitting(false);
+              // resetForm();
             })
             .catch(() => {
               alert("Error rsvp unsuccessful. Please try again.");
@@ -32,7 +32,7 @@ function Rsvp({ encode }) {
         }}
       >
         <Form className="rsvp-form" name="rsvp" data-netlify="true">
-          <input type="hidden" name="rsvp" value="rsvps`" />
+          <input type="hidden" name="rsvp" value="rsvp" />
           <TextInput name="name">Full name:</TextInput>
           <div className="rsvp__radio-group attending">
             <h2 className="radio-group__heading">Will you be attending?</h2>
