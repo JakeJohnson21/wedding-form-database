@@ -42,6 +42,7 @@ function Rsvp({ encode }) {
                 type="radio"
                 name="picked"
                 value="one"
+                required
                 className="radio-field"
               />
               <p className="radio__roman">i.</p>
@@ -54,6 +55,7 @@ function Rsvp({ encode }) {
               <Field
                 type="radio"
                 name="picked"
+                required
                 value="two"
                 className="radio-field"
               />
@@ -66,6 +68,7 @@ function Rsvp({ encode }) {
               <Field
                 type="radio"
                 name="picked"
+                required
                 value="three"
                 className="radio-field"
               />
@@ -76,6 +79,7 @@ function Rsvp({ encode }) {
               <Field
                 type="radio"
                 name="picked"
+                required
                 value="four"
                 className="radio-field"
               />
@@ -88,6 +92,7 @@ function Rsvp({ encode }) {
               <Field
                 type="radio"
                 name="picked"
+                required
                 value="five"
                 className="radio-field"
               />
