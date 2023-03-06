@@ -19,16 +19,10 @@ function Rsvp({ encode }) {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "rsvp", ...values }),
-          })
-            .then(() => {
-              alert("Success. Thank you!");
-              // setSubmitting(false);
-              // resetForm();
-            })
-            .catch(() => {
-              alert("Error rsvp unsuccessful. Please try again.");
-              setSubmitting(false);
-            });
+          }).catch(() => {
+            alert("Error rsvp unsuccessful. Please try again.");
+            setSubmitting(false);
+          });
         }}
       >
         <Form className="rsvp-form" name="rsvp" data-netlify="true">
