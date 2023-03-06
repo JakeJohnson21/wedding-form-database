@@ -37,6 +37,7 @@ function Rsvp({ encode }) {
                   name="attending"
                   value="yes"
                   required
+                  id="rsvpyes"
                   className="radio-field"
                 />
                 <p className="radio__text">Yes</p>
@@ -47,6 +48,7 @@ function Rsvp({ encode }) {
                   name="attending"
                   value="no"
                   required
+                  id="rsvpno"
                   className="radio-field"
                 />
                 <p className="radio__text">No</p>
