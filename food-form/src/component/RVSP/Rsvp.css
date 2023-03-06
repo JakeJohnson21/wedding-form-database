@@ -55,10 +55,18 @@
 .rsvp__text-area::-webkit-scrollbar {
   display: none;
 }
-.rsvp__radio-group {
-  margin: 30px auto 60px;
-}
 
+.rsvp__radio-group {
+  margin: 10px auto 10px;
+}
+.rsvp__radio-group:last-child {
+}
+.entree {
+  margin-bottom: 40px;
+}
+.attending {
+  margin-top: 20px;
+}
 .radio-option {
   display: flex;
   flex-direction: row;
@@ -66,9 +74,24 @@
   font-size: 18px;
   align-items: center;
 }
+.attending .radio-field {
+  margin-bottom: 10px;
+}
+.attending .radio-option {
+  flex-direction: column;
+}
+.attending__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.attending .radio-field {
+  margin-top: 3px;
+  margin-right: 10px;
+}
 .radio-field {
   margin-right: 20px;
-  width: 4em;
+  width: 20px;
   position: relative;
   height: 1.6em;
   margin-left: 10px;

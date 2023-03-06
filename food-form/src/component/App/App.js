@@ -60,6 +60,16 @@ function App() {
 
   //-----------------------------------------------------------------------------
 
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  };
+
+  //-----------------------------------------------------------------------------
+
   function handleRestaurantList() {
     const populateData = async () => {
       const get = await fetch(
@@ -173,8 +183,15 @@ function App() {
               }
             />
             <Route path="/registry" name="registry" element={<Registry />} />
-            <Route path="/rsvp" name="rsvp" element={<Rsvp />} />
-            <Route path="/jakeisthebestform/*" element={<FormApp />} />
+            <Route
+              path="/rsvp"
+              name="rsvp"
+              element={<Rsvp encode={encode} />}
+            />
+            <Route
+              path="/jakeisthebestform/*"
+              element={<FormApp encode={encode} />}
+            />
           </Routes>
         </section>
 

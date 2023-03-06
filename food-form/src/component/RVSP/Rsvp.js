@@ -2,7 +2,6 @@ import React from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import TextAreaInput from "./TextAreaInput";
 import TextInput from "./TextInput";
-import RadioOption from "./RadioOption";
 import { rsvpSchema } from "../../utils/rsvpSchema";
 
 function Rsvp({ encode }) {
@@ -35,7 +34,32 @@ function Rsvp({ encode }) {
         <Form className="rsvp-form" name="rsvp" data-netlify="true">
           <input type="hidden" name="rsvp" value="rsvp`" />
           <TextInput name="name">Full name:</TextInput>
-          <div className="rsvp__radio-group">
+          <div className="rsvp__radio-group attending">
+            <h2 className="radio-group__heading">Will you be attending?</h2>
+            <div className="attending__wrapper">
+              <label className="radio-option">
+                <Field
+                  type="radio"
+                  name="attending"
+                  value="yes"
+                  required
+                  className="radio-field"
+                />
+                <p className="radio__text">Yes</p>
+              </label>
+              <label className="radio-option">
+                <Field
+                  type="radio"
+                  name="attending"
+                  value="no"
+                  required
+                  className="radio-field"
+                />
+                <p className="radio__text">No</p>
+              </label>
+            </div>
+          </div>
+          <div className="rsvp__radio-group entree">
             <h2 className="radio-group__heading">Select your entree</h2>
             <label className="radio-option">
               <Field

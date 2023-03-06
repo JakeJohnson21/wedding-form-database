@@ -4,14 +4,7 @@ import StayForm from "../StayForm";
 
 import { Routes, Route, Link } from "react-router-dom";
 
-function FormApp() {
-  const encode = (data) => {
-    return Object.keys(data)
-      .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-      )
-      .join("&");
-  };
+function FormApp({ encode }) {
   return (
     <main className="page">
       <div className="app">
