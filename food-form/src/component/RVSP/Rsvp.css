@@ -4,16 +4,18 @@
   align-items: center;
   max-width: 600px;
   border-radius: 100px;
-  padding: 50px;
+  padding: 30px 50px;
   margin: auto;
 }
 .page__title {
-  font-size: 52px;
+  font-size: 38px;
   font-weight: 500;
-  margin: 40px auto;
+  margin: 30px auto;
   text-align: center;
 }
-
+.rsvp__wrapper .page__title {
+  margin-bottom: 10px;
+}
 .rsvp__caption {
   font-weight: 700;
   font-size: 18px;
@@ -68,7 +70,7 @@
   margin-bottom: 40px;
 }
 .attending {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 .radio-option {
   display: flex;
@@ -82,11 +84,13 @@
 }
 .attending .radio-option {
   flex-direction: column;
+  margin-bottom: 0;
 }
 .attending__wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  height: min-content;
 }
 .attending .radio-field {
   margin-top: 3px;

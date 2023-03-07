@@ -1,0 +1,53 @@
+.page__text {
+  font-weight: 300;
+  font-size: 16px;
+  max-width: 600px;
+  width: 90vw;
+  margin: 50px auto;
+  transition: all 0.5s 0s linear;
+}
+.main {
+  margin-top: 50px;
+  transition: all 0.5s 0s linear;
+}
+.registry__link {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 170px;
+  height: 50px;
+  position: relative;
+  margin: 30px 50px 10px 50px;
+  transition: all 0.5s 0s linear;
+}
+
+.registry__link_wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(75, 117, 233);
+  box-shadow: inset 0px 0px 30px 2px rgba(0, 0, 0, 0.615);
+  border-radius: 200px;
+  padding: 20px 50px 0px;
+}
+
+.registry__link:hover {
+  transform: scale(103%);
+  transition: all 0.2s 0s ease-in;
+}
+
+#crate {
+  background-image: url(../../images/crate-barrel-logo-white.svg);
+  bottom: 5px;
+  width: 180px;
+}
+
+#amazon {
+  background-image: url(../../images/amazon-logo-white.svg);
+  width: 186px;
+  padding-top: 30px;
+}
+
+#west {
+  background-image: url(../../images/west-elm-logo-white.svg);
+  bottom: 5px;
+}

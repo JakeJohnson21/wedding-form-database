@@ -8,6 +8,7 @@ function Rsvp({ encode }) {
   return (
     <section className="rsvp__wrapper">
       <h2 className="page__title">RSVP</h2>
+      <hr className="heading__divider"></hr>
       <p className="rsvp__caption">
         Each guest will need their own submission.
       </p>

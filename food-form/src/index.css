@@ -9,7 +9,7 @@ button {
   cursor: pointer;
 }
 * {
-  font-family: "Heebo";
+  font-family: "Heebo", sans-serif;
   letter-spacing: 0.08ch;
   transition: all 0.2s 0s linear;
   color: white;

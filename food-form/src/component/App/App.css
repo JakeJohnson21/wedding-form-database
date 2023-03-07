@@ -35,10 +35,11 @@
   bottom: 50px;
 }
 .heading__divider {
-  height: 2px;
-  width: 36%;
-  margin: 20px auto;
-  background-color: white;
+  height: 0px;
+  width: 16%;
+  margin: -10px auto 20px;
+  background-color: transparent;
+  border-bottom: 4px dotted white;
 }
 
 .heading-date {

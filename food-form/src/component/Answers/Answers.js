@@ -6,6 +6,7 @@ function Answers() {
   return (
     <section className="answers__wrapper">
       <h2 className="page__title">Questions & Answers</h2>
+      <hr className="heading__divider"></hr>
       {data.map((item) => (
         <AnswerItem
           key={item}
