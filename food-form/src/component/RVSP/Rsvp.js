@@ -12,17 +12,23 @@ function Rsvp({ encode }) {
         Each guest will need their own submission.
       </p>
       <Formik
-        initialValues={{ name: "", picked: "", notes: "" }}
+        initialValues={{ name: "", attending: "", picked: "", notes: "" }}
         validationSchema={rsvpSchema}
         onSubmit={(values, { resetForm, setSubmitting }) => {
           fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "rsvp", ...values }),
-          }).catch(() => {
-            alert("Error rsvp unsuccessful. Please try again.");
-            setSubmitting(false);
-          });
+          })
+            .then(() => {
+              alert("Thank you for responding.");
+              setSubmitting(false);
+              resetForm();
+            })
+            .catch(() => {
+              alert("Error rsvp unsuccessful. Please try again.");
+              setSubmitting(false);
+            });
         }}
       >
         <Form className="rsvp-form" name="rsvp" data-netlify="true">

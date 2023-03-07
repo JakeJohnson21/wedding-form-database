@@ -1,0 +1,12 @@
+.guest__heading {
+  margin-top: 50px;
+}
+.guest__text {
+  font-size: 22px;
+  color: white;
+  margin: 50px;
+}
+
+.wraps {
+  display: flex;
+}

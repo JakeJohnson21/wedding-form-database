@@ -33,6 +33,7 @@ button {
 @import url(component/RVSP/Rsvp.css);
 @import url(component/Footer/Footer.css);
 @import url(component/Countdown/Countdown.css);
+@import url(component/GuestList/GuestList.css);
 
 @import url(fonts/inter.css);
 @import url(fonts/fonts.css);

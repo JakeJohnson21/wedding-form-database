@@ -5,6 +5,7 @@ import Answers from "../Answers/Answers";
 import Registry from "../Registry/Registry";
 import Rsvp from "../RVSP/Rsvp";
 import FormApp from "../FormApp/FormApp";
+import GuestList from "../GuestList/GuestList";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
@@ -54,9 +55,9 @@ function App() {
       }
     });
   };
-  useMemo(() => {
-    startTimer();
-  }, []);
+  // useMemo(() => {
+  //   startTimer();
+  // }, []);
 
   //-----------------------------------------------------------------------------
 
@@ -191,6 +192,11 @@ function App() {
             <Route
               path="/jakeisthebestform/*"
               element={<FormApp encode={encode} />}
+            />
+            <Route
+              path="/guests5859142023"
+              name="guestlist"
+              element={<GuestList />}
             />
           </Routes>
         </section>
