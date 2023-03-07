@@ -18,6 +18,8 @@ function App() {
   const [restaurantList, setRestaurantList] = useState([]);
   const [hotelList, setHotelList] = useState([]);
   const [adventureList, setAdventureList] = useState([]);
+  const [guestList, setGuestList] = useState([]);
+
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
   const [minutes, setMinutes] = useState();
@@ -55,9 +57,9 @@ function App() {
       }
     });
   };
-  // useMemo(() => {
-  //   startTimer();
-  // }, []);
+  useMemo(() => {
+    startTimer();
+  }, []);
 
   //-----------------------------------------------------------------------------
 
@@ -121,12 +123,31 @@ function App() {
     };
     populateData();
   }
+
+  function handleGuestList() {
+    const populateGuests = async () => {
+      const get = await fetch(
+        `https://api.netlify.com/api/v1/forms/6405b9e7a9d6b60008315806/submissions`,
+        {
+          headers: {
+            Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      const response = await get.json();
+      setGuestList(response);
+    };
+    populateGuests();
+  }
+
   //-----------------------------------------------------------------------------
 
   useEffect(() => {
     handleRestaurantList();
     handleHotelList();
     handleAdventureList();
+    handleGuestList();
   }, []);
 
   //-----------------------------------------------------------------------------
@@ -196,7 +217,7 @@ function App() {
             <Route
               path="/guests5859142023"
               name="guestlist"
-              element={<GuestList />}
+              element={<GuestList items={guestList} />}
             />
           </Routes>
         </section>

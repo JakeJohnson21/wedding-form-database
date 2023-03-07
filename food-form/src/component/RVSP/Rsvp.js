@@ -67,11 +67,11 @@ function Rsvp({ encode }) {
               <Field
                 type="radio"
                 name="picked"
-                value="one"
+                value="I. Fish"
                 required
                 className="radio-field"
               />
-              <p className="radio__roman">i.</p>
+              <p className="radio__roman">I</p>
               <p className="radio__text">
                 Seared Wisconsin Walleye (Fish) Fillets
               </p>
@@ -82,10 +82,10 @@ function Rsvp({ encode }) {
                 type="radio"
                 name="picked"
                 required
-                value="two"
+                value="II. Steak"
                 className="radio-field"
               />
-              <p className="radio__roman">ii.</p>
+              <p className="radio__roman">II.</p>
               <p className="radio__text">
                 Filet Mignon with Red Onion Confit & Chicken En'croute
               </p>
@@ -95,10 +95,10 @@ function Rsvp({ encode }) {
                 type="radio"
                 name="picked"
                 required
-                value="three"
+                value="III. Vegetarian"
                 className="radio-field"
               />
-              <p className="radio__roman">iii.</p>
+              <p className="radio__roman">III.</p>
               <p className="radio__text">Vegetarian: Vegetarian En’croute</p>
             </label>
             <label className="radio-option">
@@ -106,10 +106,10 @@ function Rsvp({ encode }) {
                 type="radio"
                 name="picked"
                 required
-                value="four"
+                value="IV. Vegan"
                 className="radio-field"
               />
-              <p className="radio__roman">iv.</p>
+              <p className="radio__roman">IV.</p>
               <p className="radio__text">
                 Vegan: Two Grilled Portobello Mushrooms w/ Potato & Vegetable
               </p>
@@ -119,10 +119,10 @@ function Rsvp({ encode }) {
                 type="radio"
                 name="picked"
                 required
-                value="five"
+                value="V. Childrens"
                 className="radio-field"
               />
-              <p className="radio__roman">v.</p>
+              <p className="radio__roman">V.</p>
               <p className="radio__text">
                 Children’s Entrée: Breaded Chicken Tenders w/ Dipping Sauce
               </p>

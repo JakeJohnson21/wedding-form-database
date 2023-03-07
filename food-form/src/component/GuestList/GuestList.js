@@ -1,49 +1,34 @@
 import { useEffect, useMemo, useState } from "react";
+// import exportFromJSON from "export-from-json";
 
-function GuestList() {
-  const [guests, setGuests] = useState([]);
+import Guest from "./Guest";
 
-  useMemo(() => {
-    const populateGuests = async () => {
-      const get = await fetch(
-        `https://api.netlify.com/api/v1/forms/6405a2041f961b0008fbe776/submissions`,
-        {
-          headers: {
-            Authorization: "Bearer qFvLqEc18lXXWwYCViV9rJ_PqraDwQA8vjE2bNfAQLc",
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      const response = await get.json();
-      setGuests(response);
-    };
-    populateGuests();
-  }, []);
-  console.log(guests);
+function GuestList({ items }) {
+  // const data = items;
+  // const fileName = "download";
+  // const exportType = "xls";
+
+  // const ExportToExcel = () => {
+  //   exportFromJSON({ data, fileName, exportType });
+  // };
 
   return (
-    <section className="page">
-      <h2 className="guest__heading">Guest List</h2>
-      {guests.map((item) => {
-        <div className="guest__wrapper" key={item.id}>
-          <label>
-            Name:
-            <p className="guest__text"> Hello {item.data.name}</p>
-          </label>
-          <label>
-            Attending:
-            <p className="guest__text">{item.data.attending}</p>
-          </label>
-          <label>
-            Entree:
-            <p className="guest__text">{item.data.entree}</p>
-          </label>
-          <label>
-            Notes:
-            <p className="guest__text">{item.data.notes}</p>
-          </label>
-        </div>;
-      })}
+    <section className="page guest__page">
+      <h2 className="page__title">Guest List</h2>
+      {/* <button className="download__button" onClick={ExportToExcel}>
+        <i className="download__icon"></i>
+      </button> */}
+      <div className="guest__wrapper">
+        {items.map((item) => (
+          <Guest
+            key={item.data.id}
+            name={item.data.name}
+            attending={item.data.attending}
+            entree={item.data.picked}
+            notes={item.data.notes}
+          />
+        ))}
+      </div>
     </section>
   );
 }
