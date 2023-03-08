@@ -19,8 +19,13 @@ function AnswerItem({
         <p className="answer-item__answer answer-item__address">{address}</p>
       ) : null}
       {link ? (
-        <a className="answers__link" href={`${link}`}>
-          Visit Website{" "}
+        <a
+          className="answers__link"
+          target="_blank"
+          rel="noreferrer noopener"
+          href={`${link}`}
+        >
+          Visit Website
         </a>
       ) : null}
     </div>

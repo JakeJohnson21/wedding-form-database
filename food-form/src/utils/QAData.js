@@ -14,7 +14,7 @@ const data = [
   {
     q: "Address of wedding reception and ceremony",
     a: "The wedding reception and the ceremony will be held at the same location at: Schlitz Audobon Nature Center",
-    link: "https://www.schlitzaudobon.org",
+    link: "https://www.schlitzaudubon.org",
     address: "Address: 1111 E Brown Deer Rd, Bayside, WI 53217",
   },
   {
@@ -32,18 +32,17 @@ const data = [
   },
   {
     q: "Wedding dress code",
-    a: "Black Tie Optional Attire. You can decide to wear something more formal and go all out and we are just as happy to have you in your shorts, sandals, and fedora.",
-    aa: "We do encourage those that wish to, to wear traditional Indian/Pakistani attire. Farial and a few of her family members/friends and the ladies in Kyle’s family will all have traditional Indian/Pakistani attire.",
-    aaa: "We also suggest bringing sneakers/comfortable shoes to walk the trails at the venue. Parking is literally right next to the area where the ceremony will be, you will be able to go back and forth to your car if you need to.",
+    a: "Semi Formal. We do encourage those that wish to wear traditional Indian/Pakistani attire to do so.We do encourage those that wish to, to wear traditional Indian/Pakistani attire. Farial and a few of her family members/friends and the ladies in Kyle’s family will all have traditional Indian/Pakistani attire.",
+    aa: "We also suggest bringing sneakers/comfortable shoes to walk the trails at the venue.",
   },
   {
     q: "Am I allowed to bring a plus 1?",
-    a: "Unfortunately, if we have not written plus 1 on your invitation card, we wish that you come by yourself. If you feel we have overlooked something, please reach out. We will plan our table arrangement well and you will definitely know someone at your table or be in a group you will feel excited to get to know. Our friends and family are pretty awesome.",
+    a: "Unfortunately, if we have not written plus 1 in your invitation, we wish that you do not add additional guests. If you feel we have overlooked something, please reach out. We will plan our table arrangement well and you will definitely know someone at your table or be in a group you will feel excited to get to know. Our friends and family are pretty awesome.",
   },
   {
     q: "Am I allowed to bring my kids?",
-    a: "Guests from abroad and immediate family – Absolutely. Our guests travelling in from aboard, who is going to watch your kids in your home country?? That sounds a bit difficult, and we want you to be able to come and enjoy the time you are able to here.",
-    aa: "In general for the rest of the guests – we are assuming that you could use a night off. We hope you understand and are able to make arrangements.",
+    a: "Guests from abroad and immediate family – Absolutely.",
+    aa: "For the rest of the guests – we are assuming that you could use a night off. We hope you understand and are able to make arrangements.",
   },
   {
     q: "Will there be an open bar?",
@@ -52,6 +51,7 @@ const data = [
   },
   {
     q: "Wedding gifts",
+    a: "We are so pleased to have you join our celebration that your presence is a gift to us.  Should you also want to include a gift please see our registries or a wedding card box will be available",
   },
   {
     q: "What time should I arrive at the reception?",

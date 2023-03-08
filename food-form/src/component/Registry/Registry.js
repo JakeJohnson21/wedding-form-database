@@ -19,7 +19,11 @@ function Registry() {
         >
           <div className="registry__link" id="crate"></div>
         </a>
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <a
+          href="https://www.amazon.com/wedding/share/kyleandfarial2023"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           <div className="registry__link" id="amazon"></div>
         </a>
 
