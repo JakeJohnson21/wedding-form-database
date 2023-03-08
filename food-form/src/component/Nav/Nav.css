@@ -5,7 +5,8 @@
   border-radius: 20px;
   /* padding-top: 4vmin; */
   margin: auto;
-  background-color: rgba(45, 40, 37, 0.6);
+  background-color: rgba(63, 199, 188, 0.722);
+
   box-shadow: inset 0px 4px 8px 3px rgb(35, 34, 34, 0.5);
 }
 .nav__button-wrapper_home {

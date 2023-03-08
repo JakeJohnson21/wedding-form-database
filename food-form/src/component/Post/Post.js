@@ -42,7 +42,13 @@ function Post({ name, address, url, description, price, attire }) {
         <div className={accordionItemData}>
           <div className={accordionTextContent}>
             <p className="post__sub url">
-              <a href={url} className="post__url" id="url">
+              <a
+                href={url}
+                className="post__url"
+                id="url"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
                 Visit Website
               </a>
             </p>
@@ -61,13 +67,14 @@ function Post({ name, address, url, description, price, attire }) {
                 {address}
               </p>
             </div>
-
-            <div className="detail-wrapper attire">
-              <p className="text-header">Attire: </p>
-              <p className="post__sub" id="attire">
-                {attire}
-              </p>
-            </div>
+            {attire ? (
+              <div className="detail-wrapper attire">
+                <p className="text-header">Attire: </p>
+                <p className="post__sub" id="attire">
+                  {attire}
+                </p>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

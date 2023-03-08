@@ -1,5 +1,5 @@
 .answers__wrapper {
-  max-width: 1100px;
+  max-width: 1000px;
   width: 80vw;
   display: flex;
   margin: auto;
@@ -7,10 +7,10 @@
 }
 .answer-item__wrapper {
   margin: 10px;
-  padding: 17px 30px;
-  background-color: rgba(14, 13, 13, 0.208);
+  padding: 17px 60px;
   box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.785);
-  border-radius: 15px;
+  border-radius: 25px;
+  background-color: rgba(31, 145, 206, 0.815);
   box-sizing: border-box;
   position: relative;
 }
@@ -23,8 +23,6 @@
 .answer-item__answer {
   font-weight: 300;
   font-size: 18px;
-  text-indent: 18px;
-  max-width: 80%;
   margin: auto;
 
   margin-bottom: 18px;

@@ -18,6 +18,8 @@ function StayInfo() {
       <a
         href="https://www.visitmilwaukee.org/harley-davidson-homecoming-2023/?xd_co_f=ZDAxMDVhNDUtYjlkMi00OWFmLTk5YTYtNzgwMmE1NGFhNzI1"
         className="stay__link"
+        target="_blank"
+        rel="noreferrer noopener"
       >
         Visit Site
       </a>

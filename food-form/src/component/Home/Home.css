@@ -6,25 +6,31 @@
 .title {
   margin: auto;
   text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
 }
 .date {
   margin: auto;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
   text-align: center;
 }
 .homepage__heading {
   flex-direction: column;
   text-shadow: 4px 5px 10px rgba(0, 0, 0, 0.28);
   margin-bottom: 20px;
+  padding-top: 70px;
 }
 .homepage__title {
   margin-top: 30px;
-  font-size: 65px;
+  font-size: 95px;
   font-weight: 200;
 }
 .homepage__date {
   text-shadow: 4px 5px 9px rgba(0, 0, 0, 0.2);
-  font-size: 45px;
-  font-weight: 400;
+  font-size: 55px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .other__heading {
@@ -59,8 +65,23 @@
     font-size: 40px;
   }
 }
+@media screen and (max-width: 1700px) {
+  .homepage__title {
+    font-size: 5.5vmax;
+  }
+  .homepage__date {
+    font-size: 3vmax;
+  }
+}
 
 @media screen and (max-width: 1400px) {
+  .homepage__heading {
+    margin-top: 20px;
+  }
+  .homepage__date {
+    margin-bottom: 10px;
+  }
+
   .other__title,
   .other__date {
     font-size: 30px;
@@ -68,42 +89,24 @@
 }
 
 @media screen and (max-width: 840px) {
-  .home__image {
-    width: 85vw;
-    border: 16px solid rgb(46, 46, 46, 0.7);
-  }
   .page__heading {
     flex-direction: column;
   }
   .title {
     margin: 0;
-    font-size: 52px;
   }
   .date {
     margin: 0;
-    font-size: 34px;
   }
 }
 
 @media screen and (max-width: 520px) {
-  .title {
-    font-size: 40px;
-  }
-  .homepage__title {
-    font-size: 50px;
-  }
   .homepage__heading {
     margin: 50px auto 25px;
   }
   .other__heading {
     border-bottom: 6px dotted rgba(255, 255, 255, 0.683);
     max-width: 70vw;
-  }
-  .home__image {
-    align-self: flex-start;
-  }
-  .date {
-    font-size: 28px;
   }
 }
 

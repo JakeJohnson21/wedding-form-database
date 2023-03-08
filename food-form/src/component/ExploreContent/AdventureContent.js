@@ -12,7 +12,6 @@ function AdventureContent({ items }) {
           description={item.data.description}
           url={item.data.url}
           price={item.data.price}
-          attire={item.data.attire}
         />
       ))}
     </section>
