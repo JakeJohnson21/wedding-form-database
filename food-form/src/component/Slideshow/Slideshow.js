@@ -47,6 +47,9 @@ import image46 from "../../images/Slideshow/PXL_20221224_234251391.jpg";
 import image47 from "../../images/Slideshow/PXL_20221225_135455570.MP.jpg";
 import image48 from "../../images/Slideshow/PXL_20230204_165416555.jpg";
 
+import leftArrow from "../../images/leftArrow-white.svg";
+import rightArrow from "../../images/rightArrow-white.svg";
+
 const slideImages = [
   desktopImg,
   image3,
@@ -98,14 +101,37 @@ const slideImages = [
 ];
 
 export const ImageSlideshow = () => {
+  const buttonStyle = {
+    width: "50px",
+    background: "none",
+    border: "none",
+  };
+
+  const properties = {
+    prevArrow: (
+      <button style={{ ...buttonStyle }}>
+        <img className="arrow`" src={leftArrow} />
+      </button>
+    ),
+    nextArrow: (
+      <button style={{ ...buttonStyle }}>
+        <img className="arrow" src={rightArrow} />
+      </button>
+    ),
+  };
+
   return (
     <div className="slide-container">
-      <Slide>
+      <Slide {...properties}>
         {slideImages.map((image, index) => (
           <div className="each-slide-effect" key={index}>
             <div className="home__image">
-              <img src={image} alt={`slideshow image ${index}`} />
-              <span>Slide {index}</span>
+              <img
+                src={image}
+                className="slideshow__image"
+                alt={`slideshow image ${index}`}
+              />
+              <span className="slideshow__label">{index + 1}/48</span>
             </div>
           </div>
         ))}
