@@ -110,12 +110,12 @@ export const ImageSlideshow = () => {
   const properties = {
     prevArrow: (
       <button style={{ ...buttonStyle }}>
-        <img className="arrow`" src={leftArrow} />
+        <img id="leftArrow" className="arrow" src={leftArrow} />
       </button>
     ),
     nextArrow: (
       <button style={{ ...buttonStyle }}>
-        <img className="arrow" src={rightArrow} />
+        <img id="rightArrow" className="arrow" src={rightArrow} />
       </button>
     ),
   };
