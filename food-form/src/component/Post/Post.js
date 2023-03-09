@@ -28,7 +28,7 @@ function Post({ name, address, url, description, price, attire }) {
         <button className={accordionButton} onClick={handleItemToggle}>
           <div className="accordion__heading_wrapper">
             <span className="accordion__heading-text_wrapper">
-              <p className="post__price">{price}</p>
+              {price ? <p className="post__price">{price}</p> : null}
 
               <h2 className="post__name" id="name">
                 {name}

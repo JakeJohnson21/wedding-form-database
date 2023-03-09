@@ -39,7 +39,7 @@
 
   .mobile__nav_open {
     transform: translateX(0%);
-    background-color: rgb(44, 44, 44, 0.8);
+    background-color: rgba(71, 71, 71, 0.7);
     backdrop-filter: blur(17px);
     transition: 0.5s 0s ease-in-out;
     z-index: 2;
