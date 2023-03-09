@@ -7,9 +7,9 @@ function Answers() {
     <section className="answers__wrapper">
       <h2 className="page__title">Questions & Answers</h2>
       <hr className="heading__divider"></hr>
-      {data.map((item) => (
+      {data.map((item, index) => (
         <AnswerItem
-          key={item}
+          key={index}
           question={item.q}
           answer={item.a}
           answerTwo={item.aa}
