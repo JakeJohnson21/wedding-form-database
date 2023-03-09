@@ -100,22 +100,24 @@ const slideImages = [
   image48,
 ];
 
-export const ImageSlideshow = () => {
+export const ImageSlideshow = ({ isOpen }) => {
   const buttonStyle = {
     width: "50px",
     background: "none",
     border: "none",
   };
 
+  const arrowsClassName = `${isOpen ? "arrows-hidden" : "arrow"}`;
+
   const properties = {
     prevArrow: (
       <button style={{ ...buttonStyle }}>
-        <img id="leftArrow" className="arrow" src={leftArrow} />
+        <img id="leftArrow" className={arrowsClassName} src={leftArrow} />
       </button>
     ),
     nextArrow: (
       <button style={{ ...buttonStyle }}>
-        <img id="rightArrow" className="arrow" src={rightArrow} />
+        <img id="rightArrow" className={arrowsClassName} src={rightArrow} />
       </button>
     ),
   };

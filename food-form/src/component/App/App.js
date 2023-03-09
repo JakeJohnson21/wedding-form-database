@@ -190,7 +190,11 @@ function App() {
         {/* <h1 className="heading-title">Kyle</h1> */}
         <section className="page__content">
           <Routes>
-            <Route path="/" name="home" element={<Home page={page} />} />
+            <Route
+              path="/"
+              name="home"
+              element={<Home page={page} isOpen={mobileMenuOpen} />}
+            />
             <Route path="/answers" name="answers" element={<Answers />} />
             <Route
               path="/explore/*"

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 function MobileMenu({ isOpen, onClose }) {
-  const mobileNavWrapperClass = `mobile__nav_wrapper ${
+  const mobileNavWrapperClass = `mobile__nav_wrapper  ${
     isOpen ? "mobile__nav_open" : "mobile__nav_closed"
   }`;
 

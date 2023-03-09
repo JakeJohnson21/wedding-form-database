@@ -2,7 +2,7 @@ import desktopImg from "../../images/desktop-couple.jpg";
 import mobileImg from "../../images/mobile-couple.jpg";
 import { ImageSlideshow } from "../Slideshow/Slideshow";
 
-function Home() {
+function Home({ isOpen }) {
   const images = [
     desktopImg,
     "src/images/Slideshow/IMG-20220602-WA0002.jpg",
@@ -12,7 +12,7 @@ function Home() {
 
   return (
     <section className="react-slideshow-container">
-      <ImageSlideshow />
+      <ImageSlideshow isOpen={isOpen} />
     </section>
   );
 }
