@@ -11,7 +11,15 @@
   position: relative;
   bottom: 220px;
   opacity: 1;
-  transition: all 0.4s 0.2s linear;
+  transition: all 0.2s 0.2s linear;
+}
+.arrow:active {
+  opacity: 0.4;
+  transition: all 0.1s 0s ease-in-out;
+}
+.arrow:hover {
+  transform: scale(1.15);
+  transition: all 0.3s 0s linear;
 }
 #leftArrow {
   left: 50px;
