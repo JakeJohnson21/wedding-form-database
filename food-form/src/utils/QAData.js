@@ -1,5 +1,11 @@
 const data = [
   {
+    q: "Address of wedding reception and ceremony",
+    a: "The wedding reception and the ceremony will be held at the same location at: Schlitz Audobon Nature Center",
+    link: "https://www.schlitzaudubon.org",
+    address: "Address: 1111 E Brown Deer Rd, Bayside, WI 53217",
+  },
+  {
     q: "Where to RSVP",
     a: "You will need to RSVP online on our website and select your preferred dinner plate and notify us of any dietary restrictions (see below). ",
   },
@@ -10,12 +16,6 @@ const data = [
   {
     q: "Where to mention your dietary restrictions",
     a: "You can enter your dietary restrictions during RSVP since we will ask you to choose your preferred dinner plate and we will try to accommodate the best we can.",
-  },
-  {
-    q: "Address of wedding reception and ceremony",
-    a: "The wedding reception and the ceremony will be held at the same location at: Schlitz Audobon Nature Center",
-    link: "https://www.schlitzaudubon.org",
-    address: "Address: 1111 E Brown Deer Rd, Bayside, WI 53217",
   },
   {
     q: "Logistics and parking at the venue",
@@ -46,8 +46,7 @@ const data = [
   },
   {
     q: "Will there be an open bar?",
-    a: "Yes, there will be an open bar from 5:30 PM to 10:30 PM offering wine and beer.",
-    a: "We will also have some delicious mocktails and various sodas for those that are looking for a non-alcoholic refreshment.",
+    a: "There will be an open bar with assorted wines, beers and sodas. There will also be delicious mocktails!",
   },
   {
     q: "Wedding gifts",
