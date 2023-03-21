@@ -39,7 +39,7 @@ export const ImageSlideshow = ({ isOpen }) => {
 
   return (
     <div className="slide-container">
-      <Slide {...properties}>
+      <Slide {...properties} className="slide-wrapper">
         {slideImages.map((item) => (
           <div className="each-slide-effect" key={item.id}>
             <div className="home__image">
@@ -49,6 +49,7 @@ export const ImageSlideshow = ({ isOpen }) => {
                 alt={item.text}
               />
               <span className="slideshow__label">{item.text}</span>
+              <span className="slideshow__label ">{`${item.id} / 45`}</span>
             </div>
           </div>
         ))}

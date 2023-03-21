@@ -41,6 +41,8 @@ import image40 from "../../images/Slideshow/PXL_20221006_224200709.MP.jpg";
 import image41 from "../../images/Slideshow/PXL_20221006_235312671.MP.jpg";
 import image42 from "../../images/Slideshow/PXL_20221224_234251391.jpg";
 import image43 from "../../images/Slideshow/PXL_20221225_135455570.MP.jpg";
+import image44 from "../../images/Slideshow/IMG-20220603-WA0014.jpg";
+import image45 from "../../images/Slideshow/IMG-20220603-WA0023.jpg";
 
 export const slideImages = [
   {
@@ -131,7 +133,7 @@ export const slideImages = [
   {
     id: "18",
     image: image18,
-    text: "Thanksgiving with Kyle's Family (Palos Park, Illinois, USA)",
+    text: "Kyle Finishes his Master's Degree! (Milwaukee, Wisconsin, USA)",
   },
   {
     id: "19",
@@ -257,5 +259,15 @@ export const slideImages = [
     id: "43",
     image: image43,
     text: "Christmas morning with our stockings (Glendale, Wisconsin, USA)",
+  },
+  {
+    id: "44",
+    image: image44,
+    text: "Nikah with Kyle's Family (Jessheim, Norway)",
+  },
+  {
+    id: "45",
+    image: image45,
+    text: "Nikah with Farial's Family (Jessheim, Norway)",
   },
 ];

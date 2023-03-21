@@ -1,16 +1,15 @@
 .page__text {
-  font-weight: 500;
-  color: black;
+  font-weight: 300;
   font-size: 16px;
   max-width: 600px;
   width: 90vw;
+  text-align: center;
   margin: 50px auto;
   transition: all 0.5s 0s linear;
 }
 .main {
-  margin: auto;
-  margin-top: 50px;
   transition: all 0.5s 0s linear;
+  margin: auto;
 }
 .registry__link {
   background-position: center;
@@ -26,8 +25,9 @@
 .registry__link_wrapper {
   display: flex;
   justify-content: center;
-  background-color: rgb(75, 117, 233);
-  box-shadow: inset 0px 0px 30px 2px rgba(0, 0, 0, 0.615);
+  background-color: rgba(20, 74, 254, 0.874);
+  box-shadow: inset 0px 2px 8px 1px rgba(0, 0, 0, 0.415);
+  mix-blend-mode: luminosity;
   border-radius: 200px;
   padding: 20px 50px 0px;
 }
@@ -63,7 +63,7 @@
     border-radius: 200px;
     height: 100%;
     margin: auto;
-    padding: 80px 40px;
+    padding: 0px 40px;
   }
   .registry__link {
     margin: 60px auto;
@@ -81,15 +81,20 @@
     margin: auto;
     height: 100%;
   }
-  .registry__link {
-    margin: 40px auto;
-    width: 50vw;
+  .page__text {
+    font-size: 14px;
+    margin: 40px auto 30px;
   }
+  .registry__link {
+    margin: 20px auto;
+    width: 40vw;
+  }
+
   #crate {
-    width: 50vw;
+    width: 40vw;
   }
   #amazon {
-    width: 50vw;
+    width: 40vw;
     height: 100px;
   }
 }

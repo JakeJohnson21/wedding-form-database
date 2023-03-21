@@ -1,12 +1,12 @@
 .sub__nav {
-  background-color: rgba(38, 187, 221, 0.727);
+  background-color: rgba(69, 99, 124, 0.8);
   padding: 12px 50px 4px;
   border-radius: 25px;
   display: flex;
   margin: 20px auto 50px;
   justify-content: space-between;
   max-width: 700px;
-  box-shadow: inset 0px 4px 8px 3px rgb(35, 34, 34, 0.5);
+  box-shadow: inset 0px 3px 5px 1px rgb(35, 34, 34, 0.75);
 }
 .sub__nav_button {
   padding: 6px;

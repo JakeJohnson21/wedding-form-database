@@ -53,6 +53,7 @@
 .rsvp__text-area {
   height: 150px;
   padding: 20px;
+  margin: 20px auto;
 }
 .rsvp__text-area::-webkit-scrollbar {
   display: none;
@@ -140,7 +141,23 @@
     margin: 20px auto 15px;
   }
   .rsvp__radio-group {
-    margin: 20px 0px 30px;
+    margin: 10px 0px 20px;
+  }
+  .radio-group__heading {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+  .rsvp__caption {
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .rsvp-form__label {
+    font-size: 15px;
+    width: 85vw;
+    align-items: center;
+    text-align: center;
   }
   .rsvp-form__input {
     padding: 4px 20px;
@@ -157,5 +174,8 @@
   }
   .radio__text {
     font-size: 15px;
+  }
+  .rsvp__wrapper {
+    padding: 10px 20px;
   }
 }

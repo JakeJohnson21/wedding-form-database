@@ -1,5 +1,5 @@
 .slideshow__image {
-  width: 1000px;
+  max-width: 60vw;
   margin: 10px 30px;
   border: 20px solid white;
   background-position: center;
@@ -68,7 +68,7 @@
 
 @media screen and (max-width: 1100px) {
   .slideshow__image {
-    width: 70vw;
+    max-width: 70vw;
     border-width: 10px;
   }
   #leftArrow {

@@ -7,7 +7,7 @@ function AnswerItem({
   link,
 }) {
   return (
-    <div className="answer-item__wrapper">
+    <div className="answer-item__wrapper answer-background">
       <p className="answer-item__question">{question}</p>
       <p className="answer-item__answer">{answer}</p>
       {answerTwo ? <p className="answer-item__answer">{answerTwo}</p> : null}
