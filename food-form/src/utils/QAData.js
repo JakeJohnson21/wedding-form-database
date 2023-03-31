@@ -32,7 +32,7 @@ const data = [
   },
   {
     q: "Wedding dress code",
-    a: "Semi Formal. We do encourage those that wish to wear traditional Indian/Pakistani attire to do so.We do encourage those that wish to, to wear traditional Indian/Pakistani attire. Farial and a few of her family members/friends and the ladies in Kyle’s family will all have traditional Indian/Pakistani attire.",
+    a: "Semi Formal. We do encourage those that wish to wear traditional Indian/Pakistani attire to do so",
     aa: "We also suggest bringing sneakers/comfortable shoes to walk the trails at the venue.",
   },
   {
